@@ -73,6 +73,13 @@
             "imgUrl": ""
         },
         {
+            "country": "Croatia",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
             "country": "Belgium",
             "recommendations": ["", "", ""],
             "rating": 0,
@@ -81,6 +88,13 @@
         },
         {
             "country": "Netherlands",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "Slovenia",
             "recommendations": ["", "", ""],
             "rating": 0,
             "experience": "blablabla",
