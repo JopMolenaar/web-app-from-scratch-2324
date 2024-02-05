@@ -1,0 +1,104 @@
+{
+    "name": "Jop Molenaar",
+    "age": 19,
+    "visitedCountries": [
+        {
+            "country": "Costa rica",
+            "recommendations": ["", "", ""],
+            "rating": 5,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "Thailand",
+            "recommendations": ["", "", ""],
+            "rating": 5,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "Spain",
+            "recommendations": ["", "", ""],
+            "rating": 4,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "Italy",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "Portugal",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "France",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "Israel",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "Switzerland",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "Austria",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "Germany",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "Belgium",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "Netherlands",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        }
+    ],
+    "bucketList": [
+        {
+            "country": "Japan",
+            "reason": "Because of the culture, nature and food"
+        },
+        {
+            "country": "Iceland",
+            "reason": "Because of the nature"
+        },
+        {
+            "country": "Lapland",
+            "reason": "Because of the nature, mostly the snow, stars and northen lights"
+        }
+    ]
+}
