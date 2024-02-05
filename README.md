@@ -6,13 +6,13 @@
 
 Here comes a description!
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
 <!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
+
+![Here comes a picture of the frontend of my website. Its not there yet]( "Shiny frontend picture of my website")
 
 <!-- Maybe a table of contents here? 📚 -->
 
-## table of contents
+## Table of contents
 
 <!-- How about a section that describes how to install this project? 🤓 -->
 
@@ -20,7 +20,11 @@ Here comes a description!
 
 <!-- ...but how does one use this project? What are its features 🤔 -->
 
+## Use of features
+
 <!-- What external data source is featured in your project and what are its properties 🌠 -->
+
+## External data source properties
 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
