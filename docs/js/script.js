@@ -18,7 +18,12 @@ const createCards = (data) => {
 
     countryCards.forEach((country) => {
         const li = document.createElement("li");
-        li.textContent = country.country;
+        const countryName = document.createElement("h2");
+        countryName.textContent = country.country;
+        const img = document.createElement("img");
+        img.src = country.imgUrl;
+        li.append(countryName);
+        li.append(img);
         cardList.append(li);
     });
 };

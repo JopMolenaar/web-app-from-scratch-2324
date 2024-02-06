@@ -7,28 +7,28 @@
             "recommendations": ["", "", ""],
             "rating": 5,
             "experience": "blablabla",
-            "imgUrl": ""
+            "imgUrl": "images/costaRicaPhoto.png"
         },
         {
             "country": "Thailand",
             "recommendations": ["", "", ""],
             "rating": 5,
             "experience": "blablabla",
-            "imgUrl": ""
+            "imgUrl": "images/bangkokStreet.png"
         },
         {
             "country": "Switzerland",
             "recommendations": ["", "", ""],
             "rating": 0,
             "experience": "blablabla",
-            "imgUrl": ""
+            "imgUrl": "images/switzerlandMountains.png"
         },
         {
             "country": "Croatia",
             "recommendations": ["", "", ""],
             "rating": 0,
             "experience": "blablabla",
-            "imgUrl": ""
+            "imgUrl": "images/croatiaCity.jpg"
         },
         {
             "country": "Spain",
