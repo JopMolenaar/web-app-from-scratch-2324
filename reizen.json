@@ -17,6 +17,20 @@
             "imgUrl": ""
         },
         {
+            "country": "Switzerland",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "Croatia",
+            "recommendations": ["", "", ""],
+            "rating": 0,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
             "country": "Spain",
             "recommendations": ["", "", ""],
             "rating": 4,
@@ -44,20 +58,7 @@
             "experience": "blablabla",
             "imgUrl": ""
         },
-        {
-            "country": "Israel",
-            "recommendations": ["", "", ""],
-            "rating": 0,
-            "experience": "blablabla",
-            "imgUrl": ""
-        },
-        {
-            "country": "Switzerland",
-            "recommendations": ["", "", ""],
-            "rating": 0,
-            "experience": "blablabla",
-            "imgUrl": ""
-        },
+
         {
             "country": "Austria",
             "recommendations": ["", "", ""],
@@ -72,13 +73,7 @@
             "experience": "blablabla",
             "imgUrl": ""
         },
-        {
-            "country": "Croatia",
-            "recommendations": ["", "", ""],
-            "rating": 0,
-            "experience": "blablabla",
-            "imgUrl": ""
-        },
+
         {
             "country": "Belgium",
             "recommendations": ["", "", ""],
@@ -88,13 +83,6 @@
         },
         {
             "country": "Netherlands",
-            "recommendations": ["", "", ""],
-            "rating": 0,
-            "experience": "blablabla",
-            "imgUrl": ""
-        },
-        {
-            "country": "Slovenia",
             "recommendations": ["", "", ""],
             "rating": 0,
             "experience": "blablabla",
@@ -109,10 +97,6 @@
         {
             "country": "Iceland",
             "reason": "Because of the nature"
-        },
-        {
-            "country": "Lapland",
-            "reason": "Because of the nature, mostly the snow, stars and northen lights"
         }
     ]
 }
