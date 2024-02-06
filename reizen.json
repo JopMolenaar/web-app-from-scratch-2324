@@ -3,7 +3,7 @@
     "age": 19,
     "visitedCountries": [
         {
-            "country": "Costa rica",
+            "country": "Costa Rica",
             "recommendations": ["", "", ""],
             "rating": 5,
             "experience": "blablabla",
@@ -92,7 +92,17 @@
     "bucketList": [
         {
             "country": "Japan",
-            "reason": "Because of the culture, nature and food"
+            "reason": "Because of the culture, nature and food, Because of the culture, nature and food, Because of the culture, nature and food, Because of the culture, nature and food, Because of the culture, nature and food, Because of the culture, nature and food, Because of the culture, nature and food",
+            "activities": [
+                {
+                    "activity": "1",
+                    "imgUrl": ""
+                },
+                {
+                    "activity": "2",
+                    "imgUrl": ""
+                }
+            ]
         },
         {
             "country": "Iceland",
