@@ -36,7 +36,7 @@ main {
 }
 
 /* div to make the section snap  */
-main div {
+main > div {
     width: 100vw;
     height: 100vh;
     scroll-snap-type: y mandatory;
@@ -78,12 +78,10 @@ main div > section:nth-child(1) ul {
     gap: 3vw;
 }
 main div > section:nth-child(1) ul li {
-    border: solid black 1px;
     width: 40vw;
     height: 40vh;
     position: relative;
     border-radius: 10px;
-    overflow: hidden;
 }
 main div > section:nth-child(1) ul li h2 {
     width: 100%;
@@ -104,14 +102,14 @@ main div > section:nth-child(1) ul li img {
     object-fit: cover;
     position: absolute;
     top: 0;
-    z-index: -1;
+    transform: translate(-50%, 0);
+    border-radius: 10px;
 }
 
 /* Where I want to fo section */
 main div > section:nth-child(2) {
     position: relative;
     display: grid;
-    /* flex-direction: column; */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 25% 5em 10em 1fr;
 }
