@@ -6,7 +6,7 @@
  */
 
 // Fetch the json file
-fetch("../reizen.json")
+fetch("reizen.json")
     .then((response) => response.json())
     .then((data) => {
         createCards(data);
