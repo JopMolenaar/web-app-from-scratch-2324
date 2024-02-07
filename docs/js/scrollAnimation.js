@@ -24,3 +24,5 @@ div.addEventListener("scroll", function () {
         element.classList.remove("inViewPort");
     }
 });
+
+// https://phuoc.ng/collection/html-dom/check-if-an-element-is-in-the-viewport/

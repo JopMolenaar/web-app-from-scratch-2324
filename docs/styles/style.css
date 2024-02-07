@@ -44,7 +44,7 @@ main > div {
     scroll-snap-stop: always;
     scroll-behavior: smooth;
 }
-main div > section {
+main > div > section {
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -52,16 +52,16 @@ main div > section {
 }
 
 /* My visited country cards section */
-main div > section:nth-child(1) {
+main > div > section:nth-child(1) {
     display: flex;
     flex-direction: column;
 }
-main div > section:nth-child(1) h2 {
+main > div > section:nth-child(1) h2 {
     padding-left: 2em;
     margin: 0;
     margin-top: 1em;
 }
-main div > section:nth-child(1) ul {
+main > div > section:nth-child(1) ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -77,13 +77,13 @@ main div > section:nth-child(1) ul {
     transform: translate(0% -50%);
     gap: 3vw;
 }
-main div > section:nth-child(1) ul li {
+main > div > section:nth-child(1) ul li {
     width: 40vw;
     height: 40vh;
     position: relative;
     border-radius: 10px;
 }
-main div > section:nth-child(1) ul li h2 {
+main > div > section:nth-child(1) ul li h2 {
     width: 100%;
     padding: 0;
     text-align: center;
@@ -96,7 +96,7 @@ main div > section:nth-child(1) ul li h2 {
     padding-top: 1em;
     padding-bottom: 1em;
 }
-main div > section:nth-child(1) ul li img {
+main > div > section:nth-child(1) ul li img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -106,27 +106,36 @@ main div > section:nth-child(1) ul li img {
     border-radius: 10px;
 }
 
+main > div > section:nth-child(1) ul li div.flip-card-back section {
+    width: 100%;
+    height: auto;
+}
+main > div > section:nth-child(1) ul li div.flip-card-back section img {
+    width: 20px;
+    height: 20px;
+}
+
 /* Where I want to fo section */
-main div > section:nth-child(2) {
+main > div > section:nth-child(2) {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 25% 5em 10em 1fr;
 }
-main div > section:nth-child(2) h2 {
+main > div > section:nth-child(2) h2 {
     margin: 1.2rem 1.5rem 0rem 1.5rem;
     font-size: 1.8em;
     grid-row: 2 / 3;
     grid-column: 1 / 3;
 }
-main div > section:nth-child(2) p:nth-child(2) {
+main > div > section:nth-child(2) p:nth-child(2) {
     margin: 1.2rem 1.5rem 0rem 1.5rem;
     grid-row: 3 / 4;
     grid-column: 1 / 3;
     max-width: 38em;
     min-width: 20em;
 }
-main div > section:nth-child(2) img:nth-child(4) {
+main > div > section:nth-child(2) img:nth-child(4) {
     grid-row: 1 / 2;
     grid-column: 1 / 3;
     width: 100%;
@@ -148,10 +157,10 @@ main div > section:nth-child(2) img:nth-child(4) {
         rgba(255, 255, 255, 0) 100%
     );
 }
-main div > section:nth-child(2) img:nth-child(4).inViewPort {
+main > div > section:nth-child(2) img:nth-child(4).inViewPort {
     object-position: 50% 5vh;
 }
-main div > section:nth-child(2) img:nth-child(5) {
+main > div > section:nth-child(2) img:nth-child(5) {
     width: 100%;
     height: 100%;
     object-fit: cover;
