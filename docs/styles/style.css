@@ -136,16 +136,16 @@ main div > section:nth-child(2) img:nth-child(4) {
     object-position: 50% 0%;
 
     mask-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.8) 30%,
-        rgb(0, 0, 0, 1) 100%
+        0deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgb(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
     );
     -webkit-mask-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.8) 30%,
-        rgb(0, 0, 0, 1) 100%
+        0deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(252, 252, 252, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
     );
 }
 main div > section:nth-child(2) img:nth-child(5) {
