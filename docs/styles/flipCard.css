@@ -14,9 +14,9 @@
     border-radius: 10px;
 }
 
-.flip-card:hover .flip-card-inner {
+/* .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-}
+} */
 .inner-card-flipped {
     transform: rotateY(180deg);
 }
@@ -53,3 +53,5 @@
     transform: rotateY(180deg);
     border-radius: 10px;
 }
+
+/* https://www.w3schools.com/howto/howto_css_flip_card.asp */

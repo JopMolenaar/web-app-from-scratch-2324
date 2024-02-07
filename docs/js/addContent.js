@@ -1,7 +1,6 @@
 /**
  * @Author:            Jop Molenaar
  * @Date created:       05-02-2024
- * @Date updated:       06-02-2024
  * @Description:        Store a new device in the database
  */
 
@@ -64,10 +63,27 @@ const addContentToBucketListCountry = (data) => {
     reason.textContent = bucketListCountry[0].reason;
 };
 
+// TODO explanation
 document.body.addEventListener("click", (event) => {
     const parent = event.target.parentElement;
     const secondParent = parent.parentElement;
+    const cards = document.querySelectorAll(".flip-card-inner");
+    console.log(parent, secondParent);
     if (secondParent.classList.contains("flip-card-inner")) {
-        secondParent.classList.add("inner-card-flipped");
+        secondParent.classList.toggle("inner-card-flipped");
+        cards.forEach((card) => {
+            if (card === secondParent || card === parent) {
+                console.log("jkbfjkb");
+            } else {
+                card.classList.remove("inner-card-flipped");
+            }
+        });
+    } else if (parent.classList.contains("flip-card-inner")) {
+        parent.classList.toggle("inner-card-flipped");
+        console.log("jebfjiebwfbejknfkjebkfbn");
+    } else {
+        cards.forEach((card) => {
+            card.classList.remove("inner-card-flipped");
+        });
     }
 });
