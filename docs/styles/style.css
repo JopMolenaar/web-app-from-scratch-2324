@@ -149,7 +149,7 @@ main div > section:nth-child(2) img:nth-child(4) {
     );
 }
 main div > section:nth-child(2) img:nth-child(4).inViewPort {
-    object-position: 50% -80%;
+    object-position: 50% 5vh;
 }
 main div > section:nth-child(2) img:nth-child(5) {
     width: 100%;
