@@ -19,21 +19,21 @@
         {
             "country": "Switzerland",
             "recommendations": ["", "", ""],
-            "rating": 0,
+            "rating": 4,
             "experience": "blablabla",
             "imgUrl": "images/switzerlandMountains.png"
         },
         {
             "country": "Croatia",
             "recommendations": ["", "", ""],
-            "rating": 0,
+            "rating": 3,
             "experience": "blablabla",
             "imgUrl": "images/croatiaCity.jpg"
         },
         {
             "country": "Spain",
             "recommendations": ["", "", ""],
-            "rating": 4,
+            "rating": 0,
             "experience": "blablabla",
             "imgUrl": ""
         },
@@ -85,7 +85,7 @@
             "country": "Netherlands",
             "recommendations": ["", "", ""],
             "rating": 0,
-            "experience": "blablabla",
+            "experience": "I live here :)",
             "imgUrl": ""
         }
     ],

@@ -64,9 +64,10 @@ const addContentToBucketListCountry = (data) => {
     reason.textContent = bucketListCountry[0].reason;
 };
 
-const cardsToFlip = document.querySelectorAll(".flip-card");
-cardsToFlip.forEach((card) => {
-    card.addEventListener("click", () => {
-        console.log(card);
-    });
+document.body.addEventListener("click", (event) => {
+    const parent = event.target.parentElement;
+    const secondParent = parent.parentElement;
+    if (secondParent.classList.contains("flip-card-inner")) {
+        secondParent.classList.add("inner-card-flipped");
+    }
 });
