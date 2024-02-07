@@ -17,10 +17,8 @@ fetch("./reizen.json")
  * @param {Object} data - The data out of the fetched url
  */
 const createCards = (data) => {
-    console.log(data);
     const countryCards = data.visitedCountries.slice(0, 4); // Limit to the first four elements
     const cardList = document.querySelector("#cardList");
-
     countryCards.forEach((country) => {
         const innerDiv = document.createElement("div");
         innerDiv.classList.add("flip-card-inner");
@@ -58,6 +56,13 @@ const addContentToBucketListCountry = (data) => {
     const bucketListTitle = document.querySelector("#bucketListCountry");
     const reason = document.querySelector("#reason");
     const bucketListCountry = data.bucketList.slice(0, 1);
+    const bucketList = document.querySelector("#whatDoIWantToVisit");
+
+    bucketListCountry[0].activities.forEach((activity) => {
+        const li = document.createElement("li");
+        li.textContent = activity.activity;
+        bucketList.append(li);
+    });
     bucketListTitle.textContent =
         "I still want to go to " + bucketListCountry[0].country;
     reason.textContent = bucketListCountry[0].reason;
@@ -68,19 +73,16 @@ document.body.addEventListener("click", (event) => {
     const parent = event.target.parentElement;
     const secondParent = parent.parentElement;
     const cards = document.querySelectorAll(".flip-card-inner");
-    console.log(parent, secondParent);
     if (secondParent.classList.contains("flip-card-inner")) {
-        secondParent.classList.toggle("inner-card-flipped");
         cards.forEach((card) => {
             if (card === secondParent || card === parent) {
-                console.log("jkbfjkb");
+                secondParent.classList.toggle("inner-card-flipped");
             } else {
                 card.classList.remove("inner-card-flipped");
             }
         });
     } else if (parent.classList.contains("flip-card-inner")) {
         parent.classList.toggle("inner-card-flipped");
-        console.log("jebfjiebwfbejknfkjebkfbn");
     } else {
         cards.forEach((card) => {
             card.classList.remove("inner-card-flipped");
