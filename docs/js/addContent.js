@@ -23,13 +23,30 @@ const createCards = (data) => {
     const cardList = document.querySelector("#cardList");
 
     countryCards.forEach((country) => {
+        const innerDiv = document.createElement("div");
+        innerDiv.classList.add("flip-card-inner");
+        const backDiv = document.createElement("div");
+        backDiv.classList.add("flip-card-back");
+        const frontDiv = document.createElement("div");
+        frontDiv.classList.add("flip-card-front");
         const li = document.createElement("li");
+        li.classList.add("flip-card");
+        const p = document.createElement("p");
+        p.textContent = country.experience;
         const countryName = document.createElement("h2");
         countryName.textContent = country.country;
         const img = document.createElement("img");
         img.src = country.imgUrl;
-        li.append(countryName);
-        li.append(img);
+
+        backDiv.append(p);
+        backDiv.append(countryName);
+
+        frontDiv.append(img);
+        frontDiv.append(countryName);
+
+        innerDiv.append(frontDiv);
+        innerDiv.append(backDiv);
+        li.append(innerDiv);
         cardList.append(li);
     });
 };
@@ -46,3 +63,10 @@ const addContentToBucketListCountry = (data) => {
         "I still want to go to " + bucketListCountry[0].country;
     reason.textContent = bucketListCountry[0].reason;
 };
+
+const cardsToFlip = document.querySelectorAll(".flip-card");
+cardsToFlip.forEach((card) => {
+    card.addEventListener("click", () => {
+        console.log(card);
+    });
+});
