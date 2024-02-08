@@ -82,6 +82,10 @@ main > div > section:nth-child(1) > ul > li {
     height: 40vh;
     position: relative;
     border-radius: 10px;
+    transition: 200ms;
+}
+main > div > section:nth-child(1) > ul > li:hover {
+    scale: 1.025;
 }
 main > div > section:nth-child(1) > ul > li h2 {
     width: 100%;

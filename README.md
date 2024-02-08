@@ -18,6 +18,14 @@ Here comes a description!
 
 ## Installation
 
+<!-- clone the repo -->
+
+<!-- install node -->
+
+<!-- npm i or node i -->
+
+<!-- node start command to open localhost -->
+
 <!-- ...but how does one use this project? What are its features 🤔 -->
 
 ## Use of features

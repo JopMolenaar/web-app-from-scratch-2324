@@ -29,3 +29,11 @@ Ik besloot een heleboel om te gooien
 ## Dag 7
 
 ## Dag 8
+
+<!-- Feedback:
+font veranderen
+Make it work
+Maak er iets visueel tofs van, fade in als je scrolled, loading state, hover, empty state
+
+Weather api met weer afbeelding links onder, en iets cools aan de andere kant van de
+ -->
