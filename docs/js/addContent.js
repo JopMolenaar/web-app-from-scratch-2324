@@ -34,23 +34,32 @@ const createCards = (data) => {
         countryName.textContent = country.country;
         const img = document.createElement("img");
         img.src = country.imgUrl;
+        const listWithActivities = document.createElement("ul");
+
+        country.recommendations.forEach((activity) => {
+            const listItemWithActivity = document.createElement("li");
+            listItemWithActivity.textContent = activity;
+            console.log("append");
+            listWithActivities.append(listItemWithActivity);
+        });
 
         const section = document.createElement("section");
         for (let index = 0; index < country.rating; index++) {
             const svgStar = document.createElement("img");
-            svgStar.src = "images/star-outline.svg";
+            svgStar.src = "images/star.svg";
             section.append(svgStar);
         }
-        backDiv.append(section);
 
-        // backDiv.append(countryName);
         backDiv.append(p);
+        backDiv.append(listWithActivities);
+        backDiv.append(section);
 
         frontDiv.append(img);
         frontDiv.append(countryName);
 
         innerDiv.append(frontDiv);
         innerDiv.append(backDiv);
+
         li.append(innerDiv);
         cardList.append(li);
     });
@@ -76,27 +85,29 @@ const addContentToBucketListCountry = (data) => {
     reason.textContent = bucketListCountry[0].reason;
 };
 
-// TODO explanation
 /**
  * This function listens for a click on an element and looks if the element is the one we are looking for.
  * After that we toggle or remove the inner-card-flipped class that rotates the element 180deg
  * @param {Element} event - An element that got clicked
  */
 document.body.addEventListener("click", (event) => {
-    const parent = event.target.parentElement;
-    const secondParent = parent.parentElement;
-    const cards = document.querySelectorAll(".flip-card-inner");
+    const parent = event.target.parentElement; // Get the parent of the element that is clicked
+    const secondParent = parent.parentElement; // Get the parent of the parent of the element that is clicked
+    const cards = document.querySelectorAll(".flip-card-inner"); // Get all cards (not the li but the item that needs to be flipped)
     if (secondParent.classList.contains("flip-card-inner")) {
         cards.forEach((card) => {
             if (card === secondParent || card === parent) {
+                // if the card is already open that is clicked, toggle the class
                 secondParent.classList.toggle("inner-card-flipped");
             } else {
+                // else flip all the cards to the front side
                 card.classList.remove("inner-card-flipped");
             }
         });
     } else if (parent.classList.contains("flip-card-inner")) {
         parent.classList.toggle("inner-card-flipped");
     } else {
+        // If somewhere on the body is clicked, all cards flip to the front side of the card
         cards.forEach((card) => {
             card.classList.remove("inner-card-flipped");
         });

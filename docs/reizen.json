@@ -4,28 +4,44 @@
     "visitedCountries": [
         {
             "country": "Costa Rica",
-            "recommendations": ["", "", ""],
+            "recommendations": [
+                "Go for a walk in the jungle with a guide",
+                "Go snorkeling",
+                "Visit Corcovado"
+            ],
             "rating": 5,
             "experience": "blablabla",
             "imgUrl": "images/costaRicaPhoto.png"
         },
         {
             "country": "Thailand",
-            "recommendations": ["", "", ""],
+            "recommendations": [
+                "Visit Bangkok",
+                "Enjoy the local food",
+                "Go snorkeling"
+            ],
             "rating": 5,
             "experience": "blablabla",
             "imgUrl": "images/bangkokStreet.png"
         },
         {
             "country": "Switzerland",
-            "recommendations": ["", "", ""],
+            "recommendations": [
+                "Walk in the mountains",
+                "Visit the Aletschgletsjer",
+                "Visit Luzern"
+            ],
             "rating": 4,
             "experience": "blablabla",
             "imgUrl": "images/switzerlandMountains.png"
         },
         {
             "country": "Croatia",
-            "recommendations": ["", "", ""],
+            "recommendations": [
+                "Visit Rovinj",
+                "Bring cash",
+                "Go for a road trip"
+            ],
             "rating": 3,
             "experience": "blablabla",
             "imgUrl": "images/croatiaCity.jpg"
