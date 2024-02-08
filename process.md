@@ -18,7 +18,11 @@ Verder met mijn website, flip kaartjes werkend gekregen en als je omlaag scrollt
 
 Ging verder met mijn website en vandaag viel het kwartje met template engines en backend ipv create alle elements met js :0
 
-Ik besloot een heleboel om te gooien
+Ik dacht de heleboel om te gooien maar daarna bedacht ik bij mezelf dat dat meer backend is en ik dan minder vanilla js schrijf terwijl dat de opdracht is. Ook is het meer werk en wil ook genoeg andere dingen nog doen. Het is fijn dat het kwartje viel want dat betekent dat ik weer een extra inzicht heb over hoe het web kan werken.
+
+Ook heb ik deze dag feedback gekregen en deze punten waren:
+
+-
 
 ## Dag 5
 
@@ -38,10 +42,11 @@ Maak er iets visueel tofs van, fade in als je scrolled, loading state, hover, em
 Weather api met weer afbeelding links onder, en iets cools aan de andere kant van de
  -->
 
-<!--          <% data.visitedCountries.forEach(function(country){ %>
-                        <!-- <%- include('user/show', {user: user}); %> -->
+```
+        <% data.visitedCountries.forEach(function(country){ %>
+                         <%- include('user/show', {user: user}); %>
 
-                   <!--     <li>
+                       <li>
                             <div>
                                 <div>
                                     <h2><%= country.country %></h2>
@@ -56,3 +61,4 @@ Weather api met weer afbeelding links onder, en iets cools aan de andere kant va
                             </div>
                         </li>
                         <% }); %> -->
+```
