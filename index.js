@@ -1,19 +1,14 @@
-var express = require("express");
-var app = express();
-
+const express = require("express");
+const app = express();
+const path = require("path");
 // set the view engine to ejs
 app.set("view engine", "ejs");
 
-// use res.render to load up an ejs view file
-
+app.use(express.static(path.join(__dirname, "docs")));
 // index page
-app.get("/", function (req, res) {
+app.get("/home", function (req, res) {
     res.render("pages/index");
-});
-
-// about page
-app.get("/about", function (req, res) {
-    res.render("pages/about");
+    // use res.render to load up an ejs view file
 });
 
 app.listen(3000);

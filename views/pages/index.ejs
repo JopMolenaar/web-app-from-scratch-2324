@@ -3,17 +3,30 @@
     <head>
         <%- include('../partials/head'); %>
     </head>
-    <body class="container">
+    <body>
         <header><%- include('../partials/header'); %></header>
-
         <main>
-            <div class="jumbotron">
-                <h1>This is great</h1>
-                <p>Welcome to templating using EJS</p>
+            <div>
+                <section>
+                    <h2>My already visited countries:</h2>
+                    <ul id="cardList"></ul>
+                </section>
+                <section>
+                    <h2 id="bucketListCountry"></h2>
+                    <p id="reason"></p>
+                    <section>
+                        <h3>What do I want to visit?</h3>
+                        <ul id="whatDoIWantToVisit"></ul>
+                    </section>
+
+                    <!-- https://www.google.com/search?sca_esv=30ba42da69d2c19f&sxsrf=ACQVn08hCVNWO1crst8OLfgsMzrVDrK20Q:1707140830784&q=japan+images&tbm=isch&source=lnms&sa=X&sqi=2&ved=2ahUKEwj_mbOWq5SEAxUHi_0HHQCeDp4Q0pQJegQICxAB&biw=767&bih=1008&dpr=2#imgrc=xjyss59VuaRNfM&imgdii=Wtux9k75AD6k6M -->
+                    <img src="images/photoJapanLandscape.jpeg" alt="photo" />
+                    <!-- https://www.google.com/search?sca_esv=30ba42da69d2c19f&sxsrf=ACQVn08hCVNWO1crst8OLfgsMzrVDrK20Q:1707140830784&q=japan+images&tbm=isch&source=lnms&sa=X&sqi=2&ved=2ahUKEwj_mbOWq5SEAxUHi_0HHQCeDp4Q0pQJegQICxAB&biw=767&bih=1008&dpr=2#imgrc=tfm156pVr6kE4M -->
+                    <img src="images/photoJapanCity.png" alt="photo" />
+                </section>
             </div>
         </main>
-
-        <footer><%- include('../partials/footer'); %></footer>
-        <!-- <script src="js/script.js"></script> -->
+        <script src="js/addContent.js"></script>
+        <script src="js/scrollAnimation.js"></script>
     </body>
 </html>
