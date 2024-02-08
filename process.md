@@ -37,3 +37,22 @@ Maak er iets visueel tofs van, fade in als je scrolled, loading state, hover, em
 
 Weather api met weer afbeelding links onder, en iets cools aan de andere kant van de
  -->
+
+<!--          <% data.visitedCountries.forEach(function(country){ %>
+                        <!-- <%- include('user/show', {user: user}); %> -->
+
+                   <!--     <li>
+                            <div>
+                                <div>
+                                    <h2><%= country.country %></h2>
+                                    <img src="" alt="" />
+                                </div>
+                                <div>
+                                    <h2></h2>
+                                    <p></p>
+                                    <ul></ul>
+                                    <section></section>
+                                </div>
+                            </div>
+                        </li>
+                        <% }); %> -->
