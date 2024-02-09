@@ -3,14 +3,20 @@
  * @Date created:       05-02-2024
  * @Description:        Store a new device in the database
  */
+
+// Javascript is working so set the stateText that the js is not working on display none
 document.getElementById("stateText").style.display = "none";
 
 // loading state
-window.onload = getData;
+window.onload = fetchData();
 
-async function getData() {
+/**
+ * Async function to fetch the data when the document windows loads.
+ * @param {Object} data - The data out of the fetched url
+ */
+async function fetchData() {
     // loader
-    document.getElementById("stateText").display = "flex";
+    document.getElementById("stateText").style.display = "flex";
     document.getElementById("stateText").textContent = "loading";
 
     try {
@@ -27,32 +33,14 @@ async function getData() {
                     "Empty state";
             }
         });
-
-        document.getElementById("stateText").display = "none";
+        document.getElementById("stateText").style.display = "none";
     } catch (_error) {
         console.error("there is an error");
-        document.getElementById("stateText").display = "flex";
+        document.getElementById("stateText").style.display = "flex";
         document.getElementById("stateText").textContent =
             "There is an error with fetching the data";
     }
 }
-
-// // Fetch the json file
-// fetch("./reizen.json")
-//     .then((response) => response.json())
-//     .then((data) => {
-//         if (data) {
-//             createCards(data);
-//             addContentToBucketListCountry(data);
-//         } else {
-//             document.querySelector(
-//                 "#emptyAndProgressiveEnhancement"
-//             ).style.display = "flex";
-//             document.querySelector(
-//                 "#emptyAndProgressiveEnhancement"
-//             ).textContent = "Empty state";
-//         }
-//     });
 
 /**
  * Create four cards
@@ -78,10 +66,9 @@ const createCards = (data) => {
         img.src = country.imgUrl;
         const listWithActivities = document.createElement("ul");
 
-        country.recommendations.forEach((activity) => {
+        country.recommendations.forEach((recommendation) => {
             const listItemWithActivity = document.createElement("li");
-            listItemWithActivity.textContent = activity;
-            console.log("append");
+            listItemWithActivity.textContent = recommendation;
             listWithActivities.append(listItemWithActivity);
         });
 
@@ -90,6 +77,7 @@ const createCards = (data) => {
             const svgStar = document.createElement("img");
             svgStar.src = "images/star.svg";
             section.append(svgStar);
+            // TODO 5 - rating = add more empty stars
         }
 
         backDiv.append(p);
@@ -112,18 +100,34 @@ const createCards = (data) => {
  * @param {Object} data - The data out of the fetched url
  */
 const addContentToBucketListCountry = (data) => {
-    const bucketListTitle = document.querySelector("#bucketListCountry");
+    const bucketListCountryTitle = document.querySelector(
+        "#bucketListCountry span"
+    );
     const reason = document.querySelector("#reason");
     const bucketListCountry = data.bucketList.slice(0, 1);
-    const bucketList = document.querySelector("#whatDoIWantToVisit");
-
+    const bucketList = document.querySelector("#whatDoIWantToVisit ul");
+    const bucketListTitle = document.querySelector(
+        "#whatDoIWantToVisit h3 span"
+    );
+    const headerImg = document.querySelector(
+        "main > div > section:nth-child(2) > img:nth-child(4)"
+    );
+    const cornerImg = document.querySelector(
+        "main > div > section:nth-child(2) > img:nth-child(5)"
+    );
+    const yinYangImg = document.querySelector(
+        "main > div > section:nth-child(2) > img:nth-child(6)"
+    );
+    headerImg.src = bucketListCountry[0].imgagesUrl[0];
+    cornerImg.src = bucketListCountry[0].imgagesUrl[1];
+    yinYangImg.src = bucketListCountry[0].imgagesUrl[2];
     bucketListCountry[0].activities.forEach((activity) => {
         const li = document.createElement("li");
         li.textContent = activity.activity;
         bucketList.append(li);
     });
-    bucketListTitle.textContent =
-        "I still want to go to " + bucketListCountry[0].country;
+    bucketListCountryTitle.textContent = bucketListCountry[0].country;
+    bucketListTitle.textContent = bucketListCountry[0].country;
     reason.textContent = bucketListCountry[0].reason;
 };
 

@@ -112,20 +112,22 @@
     "bucketList": [
         {
             "country": "Japan",
-            "reason": "Because of the culture, nature and food, Because of the culture, nature and food, Because of the culture, nature and food, Because of the culture, nature and food, Because of the culture, nature and food, Because of the culture, nature and food, Because of the culture, nature and food",
+            "reason": "I would like to go to Japan because I have seen a lot of cool and beautifull stuff about it. I like the culture with all the temples etc. The nature looks beautifull with all these landscapes and nice trees. And of course the food, I love sushi, noodles and many more.",
             "activities": [
                 {
-                    "activity": "Visit Tokyo",
-                    "imgUrl": ""
+                    "activity": "Visit Tokyo"
                 },
                 {
-                    "activity": "Visit the Mount Fuji",
-                    "imgUrl": ""
+                    "activity": "Visit the Mount Fuji"
                 },
                 {
-                    "activity": "Eat Japanese food",
-                    "imgUrl": ""
+                    "activity": "Eat Japanese food"
                 }
+            ],
+            "imgagesUrl": [
+                "images/photoJapanLandscape.jpeg",
+                "images/photoJapanCity.png",
+                "images/YinYangSymbol.png"
             ]
         },
         {
