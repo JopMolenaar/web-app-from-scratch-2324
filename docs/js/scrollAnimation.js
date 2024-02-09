@@ -8,13 +8,22 @@ const div = document.querySelector("main > div");
 
 let visible;
 
-const imagesToAnimate = [
+const elementsToAnimate = [
     {
-        img: "main div > section:nth-child(2) img:nth-child(4)",
+        element: "main div > section:nth-child(2) img:nth-child(3)",
         topOrBottom: "bottom",
     },
     {
-        img: "main > div > section:nth-child(2) img:nth-child(5)",
+        element: "main > div > section:nth-child(2) img:nth-child(4)",
+        topOrBottom: "top",
+    },
+    {
+        element:
+            "main > div > section:nth-child(2) section:nth-child(1) h2 span",
+        topOrBottom: "bottom",
+    },
+    {
+        element: "main > div > section:nth-child(2) section:nth-child(2) ",
         topOrBottom: "top",
     },
 ];
@@ -41,8 +50,8 @@ const isInViewport = (element, topOrBottom) => {
 };
 
 div.addEventListener("scroll", () => {
-    imagesToAnimate.forEach((object) => {
-        const element = document.querySelector(`${object.img}`);
+    elementsToAnimate.forEach((object) => {
+        const element = document.querySelector(`${object.element}`);
         visible = isInViewport(element, object.topOrBottom);
         if (visible === true) {
             element.classList.add("inViewPort");

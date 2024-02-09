@@ -35,7 +35,7 @@ async function fetchData() {
         });
         document.getElementById("stateText").style.display = "none";
     } catch (_error) {
-        console.error("there is an error");
+        console.error("there is an error", _error);
         document.getElementById("stateText").style.display = "flex";
         document.getElementById("stateText").textContent =
             "There is an error with fetching the data";
@@ -111,13 +111,13 @@ const addContentToBucketListCountry = (data) => {
         "#whatDoIWantToVisit h3 span"
     );
     const headerImg = document.querySelector(
-        "main > div > section:nth-child(2) > img:nth-child(4)"
+        "main > div > section:nth-child(2) > img:nth-child(3)"
     );
     const cornerImg = document.querySelector(
-        "main > div > section:nth-child(2) > img:nth-child(5)"
+        "main > div > section:nth-child(2) > img:nth-child(4)"
     );
     const yinYangImg = document.querySelector(
-        "main > div > section:nth-child(2) > img:nth-child(6)"
+        "main > div > section:nth-child(2) > img:nth-child(5)"
     );
     headerImg.src = bucketListCountry[0].imgagesUrl[0];
     cornerImg.src = bucketListCountry[0].imgagesUrl[1];
