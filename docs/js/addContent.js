@@ -3,14 +3,56 @@
  * @Date created:       05-02-2024
  * @Description:        Store a new device in the database
  */
+document.getElementById("stateText").style.display = "none";
 
-// Fetch the json file
-fetch("./reizen.json")
-    .then((response) => response.json())
-    .then((data) => {
-        createCards(data);
-        addContentToBucketListCountry(data);
-    });
+// loading state
+window.onload = getData;
+
+async function getData() {
+    // loader
+    document.getElementById("stateText").display = "flex";
+    document.getElementById("stateText").textContent = "loading";
+
+    try {
+        const response = await fetch("./reizen.json", {
+            method: "GET",
+        });
+        const jdata = await response.json().then((data) => {
+            if (data) {
+                createCards(data);
+                addContentToBucketListCountry(data);
+            } else {
+                document.getElementById("stateText").style.display = "flex";
+                document.getElementById("stateText").textContent =
+                    "Empty state";
+            }
+        });
+
+        document.getElementById("stateText").display = "none";
+    } catch (_error) {
+        console.error("there is an error");
+        document.getElementById("stateText").display = "flex";
+        document.getElementById("stateText").textContent =
+            "There is an error with fetching the data";
+    }
+}
+
+// // Fetch the json file
+// fetch("./reizen.json")
+//     .then((response) => response.json())
+//     .then((data) => {
+//         if (data) {
+//             createCards(data);
+//             addContentToBucketListCountry(data);
+//         } else {
+//             document.querySelector(
+//                 "#emptyAndProgressiveEnhancement"
+//             ).style.display = "flex";
+//             document.querySelector(
+//                 "#emptyAndProgressiveEnhancement"
+//             ).textContent = "Empty state";
+//         }
+//     });
 
 /**
  * Create four cards
