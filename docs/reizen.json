@@ -1,6 +1,10 @@
 {
     "name": "Jop Molenaar",
-    "age": 19,
+    "dateOfBirth": {
+        "year": 2004,
+        "month": 5,
+        "day": 31
+    },
     "visitedCountries": [
         {
             "country": "Costa Rica",
