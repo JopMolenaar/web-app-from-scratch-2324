@@ -164,7 +164,7 @@ main > div > section:nth-child(2) img:nth-child(4) {
     transform: translate(0, -20%);
     object-fit: cover;
     object-position: 50% 0%;
-    transition: 2000ms;
+    transition: 1.5s;
     mask-image: linear-gradient(
         0deg,
         rgba(255, 255, 255, 0) 0%,
@@ -190,17 +190,40 @@ main > div > section:nth-child(2) img:nth-child(5) {
     max-width: 30em;
     border-radius: 0 100% 0 0;
 }
+main > div > section:nth-child(2) img:nth-child(5).inViewPort {
+    animation: fade-in 1.2s ease-in-out;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        border-radius: 0 50% 0 0;
+    }
+    to {
+        opacity: 1;
+        border-radius: 0 100% 0 0;
+    }
+}
+
 main > div > section:nth-child(2) img:nth-child(6) {
     position: absolute;
     bottom: 3em;
     right: 1em;
     width: 10em;
     height: auto;
-    transition: 5000ms;
-    transition-timing-function: linear;
+    animation: rotating 4s linear infinite;
 }
 main > div > section:nth-child(2) img:nth-child(6):hover {
-    rotate: 360deg;
+    animation-play-state: paused;
+    /* https://css-tricks.com/how-to-play-and-pause-css-animations-with-css-custom-properties/ */
+}
+
+@keyframes rotating {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
 }
 
 @media (min-width: 75em) {
@@ -232,3 +255,20 @@ main > div > section:nth-child(2) img:nth-child(6):hover {
         max-width: 30em;
     }
 }
+
+/* main > div > section:nth-child(2) img:nth-child(5) {
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: 0px;
+    animation-range-end: 0px;
+}
+@keyframes fade-in {
+    from {
+        scale: 0.8;
+        opacity: 0;
+    }
+    to {
+        scale: 1;
+        opacity: 5;
+    }
+} */

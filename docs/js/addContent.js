@@ -41,6 +41,7 @@ async function fetchData() {
             "There is an error with fetching the data";
     }
 }
+// https://stackoverflow.com/questions/75564215/show-loading-animation-while-api-is-working-and-show-error
 
 /**
  * Create four cards

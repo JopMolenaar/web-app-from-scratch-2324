@@ -26,6 +26,95 @@ Ook heb ik deze dag feedback gekregen en deze punten waren:
 
 ## Dag 5
 
+Vandaag ging ik bezig met de scroll animaties. Ik had hier al eerder mee gewerkt maar kon de code niet terug vinden, and was begin deze week al bezig met zoeken naar de juiste code maar kon ik niet vinden, totdat ik deze video tegen kwam:
+Dit kwam echt super goed uit want het gebruikt geen js, wat we ook zo min mogelijk moesten gebruiken uit kilians presentatie, en het had de scroll animaties die ik nodig had.
+
+Wel kwam ik tegen een groot probleem. Dit was namelijk dat ik een scroll snap heb gebruikt voor mijn 2 secties, als je omlaag scrollde snap je op de tweede section en omhoog op de eerste. Dit is leuk, maar kan niet op het main element worden gedaan. Daarom had ik een div gebruikt maar dan scroll je niet op de pagina, maar op de div, dus dan werkt `animation-timeline: view();` niet.
+En aangezien ik de js code al had voor de header img was het best ez om dat dan ook te doen voor de andere images.
+
+Ik had dit:
+
+```js
+const div = document.querySelector("main > div");
+
+let visible;
+const element = document.querySelector(
+    "main div > section:nth-child(2) img:nth-child(4)"
+);
+
+const isInViewport = function (ele) {
+    const rect = ele.getBoundingClientRect();
+    return (
+        rect.left >= 0 &&
+        rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
+
+div.addEventListener("scroll", function () {
+    visible = isInViewport(element);
+    if (visible === true) {
+        element.classList.add("inViewPort");
+    } else {
+        element.classList.remove("inViewPort");
+    }
+});
+```
+
+Naar dit:
+
+```js
+const div = document.querySelector("main > div");
+
+let visible;
+
+const imagesToAnimate = [
+    {
+        img: "main div > section:nth-child(2) img:nth-child(4)",
+        topOrBottom: "bottom",
+    },
+    {
+        img: "main > div > section:nth-child(2) img:nth-child(5)",
+        topOrBottom: "top",
+    },
+];
+
+const isInViewport = (element, topOrBottom) => {
+    const rect = element.getBoundingClientRect();
+    if (topOrBottom === "top") {
+        return (
+            rect.left >= 0 &&
+            rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <=
+                (window.innerWidth || document.documentElement.clientWidth)
+        );
+    } else {
+        return (
+            rect.left >= 0 &&
+            rect.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <=
+                (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+};
+
+div.addEventListener("scroll", () => {
+    imagesToAnimate.forEach((object) => {
+        const element = document.querySelector(`${object.img}`);
+        visible = isInViewport(element, object.topOrBottom);
+        if (visible === true) {
+            element.classList.add("inViewPort");
+        } else {
+            element.classList.remove("inViewPort");
+        }
+    });
+});
+```
+
 ## Weekend
 
 ## Dag 6
