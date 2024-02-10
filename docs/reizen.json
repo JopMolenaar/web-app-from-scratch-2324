@@ -8,6 +8,7 @@
     "visitedCountries": [
         {
             "country": "Costa Rica",
+            "capital": "San José",
             "recommendations": [
                 "Go for a walk in the jungle with a guide",
                 "Go snorkeling",
@@ -19,6 +20,7 @@
         },
         {
             "country": "Thailand",
+            "capital": "Bangkok",
             "recommendations": [
                 "Visit Bangkok",
                 "Enjoy the local food",
@@ -30,6 +32,7 @@
         },
         {
             "country": "Switzerland",
+            "capital": "Bern",
             "recommendations": [
                 "Walk in the mountains",
                 "Visit the Aletschgletsjer",
@@ -41,6 +44,7 @@
         },
         {
             "country": "Croatia",
+            "capital": "Zagreb",
             "recommendations": [
                 "Visit Rovinj",
                 "Bring cash",

@@ -47,8 +47,10 @@ async function fetchData() {
  * Create four cards
  * @param {Object} data - The data out of the fetched url
  */
-const createCards = (data) => {
+const createCards = async (data) => {
     const countryCards = data.visitedCountries.slice(0, 4); // Limit to the first four elements
+    // const weatherData = await getCountryWeather(countryCards);
+    // console.log(weatherData);
     const cardList = document.querySelector("#cardList");
     countryCards.forEach((country) => {
         const innerDiv = document.createElement("div");
