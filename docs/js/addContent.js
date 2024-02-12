@@ -4,6 +4,8 @@
  * @Description:        Store a new device in the database
  */
 
+let root = document.documentElement;
+
 // Javascript is working so set the stateText that the js is not working on display none
 document.getElementById("stateText").style.display = "none";
 
@@ -17,8 +19,10 @@ window.onload = fetchData();
 async function fetchData() {
     // loader
     document.getElementById("stateText").style.display = "flex";
-    document.getElementById("stateText").textContent = "loading";
-
+    document.querySelector("#stateText p").textContent =
+        "Loading content on the page";
+    root.style.setProperty("--color-state", "black");
+    document.querySelector("#stateText img").src = "images/loadGif.gif";
     try {
         const response = await fetch("./info.json", {
             method: "GET",
@@ -27,18 +31,21 @@ async function fetchData() {
             if (data) {
                 createCards(data);
                 addContentToBucketListCountry(data);
+                document.getElementById("stateText").style.display = "none";
             } else {
                 document.getElementById("stateText").style.display = "flex";
-                document.getElementById("stateText").textContent =
-                    "Empty state";
+                document.querySelector("#stateText p").textContent =
+                    "Unfortunately there is no content on the page yet.";
+                document.querySelector("#stateText img").src = "";
             }
         });
-        document.getElementById("stateText").style.display = "none";
     } catch (_error) {
         console.error("there is an error", _error);
         document.getElementById("stateText").style.display = "flex";
-        document.getElementById("stateText").textContent =
+        document.querySelector("#stateText p").textContent =
             "There is an error with fetching the data";
+        document.querySelector("#stateText img").src = "";
+        root.style.setProperty("--color-state", "red");
     }
 }
 // https://stackoverflow.com/questions/75564215/show-loading-animation-while-api-is-working-and-show-error
@@ -102,7 +109,7 @@ const createCards = async (data) => {
         img.src = country.imgUrl;
         img.alt = country.imgAlt;
         img.setAttribute("loading", "lazy");
-      
+
         const listWithActivities = document.createElement("ul");
 
         country.recommendations.forEach((recommendation) => {

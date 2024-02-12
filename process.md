@@ -117,7 +117,15 @@ div.addEventListener("scroll", () => {
 
 ## Weekend
 
+In het weekend heb ik gewerkt aan de styling van mijn eigen site 
+
 ## Dag 6
+
+Deze maandag begon ik met de laatste dingen afvinken. Ik moest nog wat states toevoegen, toegangelijkheid verbeteren. Ook was ik bezig met het efficient inladen van de afbeelding op mijn pagina. Dit lukte niet echt. Ik probeerde iets met // Generate a unique cache-busting parameter
+const cacheBuster = new Date().getTime();
+
+// Set the low, medium, and high resolution image sources with the cache-buster parameter
+imgElement.srcset = `low-res.jpg?${cacheBuster} 200w, medium-res.jpg?${cacheBuster} 500w, high-res.jpg?${cacheBuster} 1000w`;
 
 ## Dag 7
 

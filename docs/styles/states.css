@@ -1,0 +1,32 @@
+:root {
+    --color-state: rgb(227, 0, 0);
+}
+
+main > div > section:nth-child(1) #stateText {
+    background-color: rgb(208, 208, 208);
+    border: solid var(--color-state) 2px;
+    height: 30vw;
+    width: 50vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+    position: absolute;
+    z-index: 999;
+    color: var(--color-state);
+}
+main > div > section:nth-child(1) #stateText p {
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+main > div > section:nth-child(1) #stateText img {
+    width: 40px;
+    height: auto;
+}
+/* https://www.google.com/search?q=gif+loading&oq=gif+loading&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIzNzNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#vhid=ug9A_WVkB4KZFM&vssid=l */

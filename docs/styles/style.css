@@ -61,6 +61,7 @@ main > div > section:nth-child(1) {
     max-width: 70em;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 main > div > section:nth-child(1) section {
     width: fit-content;
@@ -93,6 +94,7 @@ main > div > section:nth-child(1) > ul {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 3vw;
+    position: relative;
 }
 main > div > section:nth-child(1) > ul > li {
     width: 40vw;
