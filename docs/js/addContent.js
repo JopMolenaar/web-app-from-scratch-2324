@@ -92,6 +92,7 @@ const createCards = async (data) => {
         frontDiv.classList.add("flip-card-front");
         const li = document.createElement("li");
         li.classList.add("flip-card");
+        const contentScrollDiv = document.createElement("div");
         const p = document.createElement("p");
         p.textContent = country.experience;
         const countryName = document.createElement("h2");
@@ -119,9 +120,10 @@ const createCards = async (data) => {
             // TODO 5 - rating = add more empty stars
         }
 
-        backDiv.append(p);
-        backDiv.append(listWithActivities);
-        backDiv.append(section);
+        contentScrollDiv.append(p);
+        contentScrollDiv.append(listWithActivities);
+        contentScrollDiv.append(section);
+        backDiv.append(contentScrollDiv);
         // const weatherDataStorage = JSON.parse(
         //     localStorage.getItem("weatherData")
         // );
