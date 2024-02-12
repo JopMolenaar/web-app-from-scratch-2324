@@ -135,10 +135,15 @@ main > div > section:nth-child(1) > ul > li div.flip-card-back {
     height: 100%;
     overflow: scroll;
 }
-
+main > div > section:nth-child(1) > ul > li div.flip-card-back p:nth-child(1) {
+    padding: 1em;
+    text-align: start;
+    margin: 0;
+}
 main > div > section:nth-child(1) > ul > li div.flip-card-back ul li {
     text-align: start;
     padding-left: 0.2em;
+    padding-right: 1em;
 }
 main > div > section:nth-child(1) > ul > li div.flip-card-back section {
     width: 100%;
@@ -147,12 +152,12 @@ main > div > section:nth-child(1) > ul > li div.flip-card-back section {
     justify-content: center;
     margin-top: auto;
     margin-bottom: 2.5em;
+    padding-top: 0.5em;
 }
 main > div > section:nth-child(1) > ul > li div.flip-card-back section img {
     width: 20px;
     height: 20px;
 }
-
 main > div > section:nth-child(1) > ul > li div.flip-card-back p:nth-child(4) {
     position: absolute;
     bottom: 0.5em;
@@ -314,21 +319,21 @@ main > div > section:nth-child(2) img:nth-child(5):hover {
         align-items: center;
         gap: 5em;
     }
-    main > div > section:nth-child(1) section {
+    main > div > section:nth-child(1) > section {
         display: flex;
         flex-direction: column;
         height: 30vh;
         font-size: 1.1em;
         max-width: 23em;
     }
-    main > div > section:nth-child(1) section h2 {
+    main > div > section:nth-child(1) > section > h2 {
         font-size: 2em;
     }
-    main > div > section:nth-child(1) ul {
+    main > div > section:nth-child(1) > ul {
         margin-top: auto;
         gap: 1.5vw;
     }
-    main > div > section:nth-child(1) ul li {
+    main > div > section:nth-child(1) > ul > li {
         height: 40vh;
     }
     main > div > section:nth-child(2) img:nth-child(4) {
@@ -336,7 +341,7 @@ main > div > section:nth-child(2) img:nth-child(5):hover {
     }
 }
 @media (min-width: 90em) {
-    main > div > section:nth-child(1) section {
+    main > div > section:nth-child(1) > section {
         max-width: 30em;
     }
 }
