@@ -79,7 +79,6 @@ main > div > section:nth-child(1) section > p {
 main > div > section:nth-child(1) section > h2 {
     margin-top: 1.5em;
 }
-
 main > div > section:nth-child(1) > ul {
     list-style: none;
     margin: 0;
@@ -122,7 +121,6 @@ main > div > section:nth-child(1) > ul > li h2 {
     padding-top: 1em;
     padding-bottom: 1em;
 }
-
 main > div > section:nth-child(1) > ul > li > img {
     width: 100%;
     height: 100%;
@@ -186,21 +184,9 @@ main > div > section:nth-child(2) section:nth-child(1) {
     padding-left: 2em;
     padding-right: 2em;
 }
-
 main > div > section:nth-child(2) section:nth-child(1) h2 {
     margin: 1.2rem auto 0rem auto;
     font-size: 1.8em;
-}
-main > div > section:nth-child(2) > section:nth-child(1) > h2 span.inViewPort {
-    animation: fade-in 1s ease-in;
-}
-@keyframes fade-in {
-    0% {
-        opacity: 0.1;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 main > div > section:nth-child(2) > section:nth-child(1) > p:nth-child(2) {
     margin: 1.2rem auto 0rem auto;
@@ -211,13 +197,10 @@ main > div > section:nth-child(2) section:nth-child(2) {
     grid-column: 2 / 3;
     background-color: rgb(244, 204, 154);
     border-radius: 0 0 10px 0;
-    border-top: solid 50px  rgb(233, 192, 141);
+    border-top: solid 50px rgb(233, 192, 141);
     width: fit-content;
     height: fit-content;
-    margin-right: 1em
-}
-main > div > section:nth-child(2) section:nth-child(2).inViewPort {
-    animation: fade-in 1s ease-in;
+    margin-right: 1em;
 }
 main > div > section:nth-child(2) section:nth-child(2) h3 {
     margin-top: 0;
@@ -234,7 +217,6 @@ main > div > section:nth-child(2) img:nth-child(3) {
     transform: translate(0, -20%);
     object-fit: cover;
     object-position: 50% 0%;
-    transition: 1.5s;
     mask-image: linear-gradient(
         0deg,
         rgba(255, 255, 255, 0) 0%,
@@ -260,39 +242,70 @@ main > div > section:nth-child(2) img:nth-child(4) {
     max-width: 30em;
     border-radius: 0 100% 0 0;
 }
-main > div > section:nth-child(2) img:nth-child(4).inViewPort {
-    animation: border-change 1.2s ease-in-out;
-}
-@keyframes border-change {
-    from {
-        opacity: 0;
-        border-radius: 0 50% 0 0;
-    }
-    to {
-        opacity: 1;
-        border-radius: 0 100% 0 0;
-    }
-}
-/* TODO if the preference for animations is unset */
+
 main > div > section:nth-child(2) img:nth-child(5) {
     position: absolute;
     bottom: 3em;
     right: 1em;
     width: 10em;
     height: auto;
-    animation: rotating 4s linear infinite;
-}
-main > div > section:nth-child(2) img:nth-child(5):hover {
-    animation-play-state: paused;
-    /* https://css-tricks.com/how-to-play-and-pause-css-animations-with-css-custom-properties/ */
 }
 
-@keyframes rotating {
-    from {
-        rotate: 0deg;
+@media (prefers-reduced-motion: no-preference) {
+    /* Fade in bucketlist country */
+    main
+        > div
+        > section:nth-child(2)
+        > section:nth-child(1)
+        > h2
+        span.inViewPort {
+        animation: fade-in 1s ease-in;
     }
-    to {
-        rotate: 360deg;
+    @keyframes fade-in {
+        0% {
+            opacity: 0.1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    /* Fade in bucketlist todolist */
+    main > div > section:nth-child(2) section:nth-child(2).inViewPort {
+        animation: fade-in 1s ease-in;
+    }
+    /* Bucketlist header img */
+    main > div > section:nth-child(2) img:nth-child(3) {
+        transition: 1.5s;
+    }
+    /* Bucketlist city corner img */
+    main > div > section:nth-child(2) img:nth-child(4).inViewPort {
+        animation: border-change 1.2s ease-in-out;
+    }
+    @keyframes border-change {
+        from {
+            opacity: 0;
+            border-radius: 0 50% 0 0;
+        }
+        to {
+            opacity: 1;
+            border-radius: 0 100% 0 0;
+        }
+    }
+    /* Animation right corner img */
+    main > div > section:nth-child(2) img:nth-child(5) {
+        animation: rotating 4s linear infinite;
+    }
+    main > div > section:nth-child(2) img:nth-child(5):hover {
+        animation-play-state: paused;
+        /* https://css-tricks.com/how-to-play-and-pause-css-animations-with-css-custom-properties/ */
+    }
+    @keyframes rotating {
+        from {
+            rotate: 0deg;
+        }
+        to {
+            rotate: 360deg;
+        }
     }
 }
 

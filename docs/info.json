@@ -4,7 +4,7 @@
     "avatar_url": "",
     "age": 19,
     "city": "Haarlem",
-    "hobbies":["", "", ""],
+    "hobbies": ["", "", ""],
     "truthsAndLies": ["truth", "truth", "lie"],
     "favouriteAnimal": "",
     "dateOfBirth": {
@@ -23,7 +23,8 @@
             ],
             "rating": 5,
             "experience": "Costa Rica is really an amazing country. Lost and lost of nature, cool beautifull wildlife and warm sea.",
-            "imgUrl": "images/costaRicaPhoto.jpg"
+            "imgUrl": "images/costaRicaPhoto.jpg",
+            "imgAlt": "An image of a red bridge in a tropical forest in Costa Rica"
         },
         {
             "country": "Thailand",
@@ -35,7 +36,8 @@
             ],
             "rating": 5,
             "experience": "Thailand is so nice to go to. I have been there twice now and always ready for another vacation to go there. It has really nice food, beautifull nature and wildlife, really warm sea to swim in and nice culture.",
-            "imgUrl":"images/bangkokStreet.jpg"
+            "imgUrl": "images/bangkokStreet.jpg",
+            "imgAlt": "An image of a busy street in Bankok at night time. The street has a lot of lights and signboards on the buildings. A lot of people on the sidewalks and cars on the road."
         },
         {
             "country": "Switzerland",
@@ -47,7 +49,8 @@
             ],
             "rating": 4,
             "experience": "Switzerland is expensive but also really beautifull. It has a nice landscape with big mountains, and the cities are super clean. The gletschers are also impressive and worth a shot to hike up a mountain to watch them. Or you could also go with a gondel :)",
-            "imgUrl": "images/switzerlandMountains.png"
+            "imgUrl": "images/switzerlandMountains.png",
+            "imgAlt": "An image of a brown cow eating grass, and behind the cow you see a beautifull high mountain with gletschers and snow."
         },
         {
             "country": "Croatia",
@@ -59,7 +62,8 @@
             ],
             "rating": 3,
             "experience": "Croatia has beaches without sand, nice water to swim in, cool cities to visit and a very beautifull coastline. When you go out for diner, always bring cash with you, because a lot of restaurants are cah only.",
-            "imgUrl": "images/croatiaCity.jpg"
+            "imgUrl": "images/croatiaCity.jpg",
+            "imgAlt": "An image out of a drone perspective of the city Rovinj in Croatia. It has a church on top of a hill and is surrounded by houses a little bit lower on the hill. Around it there is the sea."
         },
         {
             "country": "Spain",
@@ -135,10 +139,15 @@
                     "activity": "Eat Japanese food"
                 }
             ],
-            "imgagesUrl": [
+            "imagesUrl": [
                 "images/photoJapanLandscape.jpeg",
                 "images/photoJapanCity.png",
                 "images/YinYangSymbol.png"
+            ],
+            "imagesAlt": [
+                "An images of a Japanese landscape with the mountain Fuji. and on the right you see a typical Japanese temple",
+                "An image of a street in the city Tokyo at night time. The street has a lot of lights and signboards on the buildings. There are also some cars on the road.",
+                "The Yin Yang symbol. Its a round symbol with a black and a white side. Both sides have also a dot of the opposite color."
             ]
         },
         {

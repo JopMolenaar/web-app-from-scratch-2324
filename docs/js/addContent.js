@@ -99,6 +99,7 @@ const createCards = async (data) => {
         const img = document.createElement("img");
 
         img.src = country.imgUrl;
+        img.alt = country.imgAlt;
         img.setAttribute("loading", "lazy");
       
         const listWithActivities = document.createElement("ul");
@@ -166,9 +167,12 @@ const addContentToBucketListCountry = (data) => {
     const yinYangImg = document.querySelector(
         "main > div > section:nth-child(2) > img:nth-child(5)"
     );
-    headerImg.src = bucketListCountry[0].imgagesUrl[0];
-    cornerImg.src = bucketListCountry[0].imgagesUrl[1];
-    yinYangImg.src = bucketListCountry[0].imgagesUrl[2];
+    headerImg.src = bucketListCountry[0].imagesUrl[0];
+    headerImg.alt = bucketListCountry[0].imagesAlt[0];
+    cornerImg.src = bucketListCountry[0].imagesUrl[1];
+    cornerImg.alt = bucketListCountry[0].imagesAlt[1];
+    yinYangImg.src = bucketListCountry[0].imagesUrl[2];
+    yinYangImg.alt = bucketListCountry[0].imagesAlt[2];
     bucketListCountry[0].activities.forEach((activity) => {
         const li = document.createElement("li");
         li.textContent = activity.activity;
