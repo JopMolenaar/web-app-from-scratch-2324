@@ -136,6 +136,8 @@ main > div > section:nth-child(1) > ul > li div.flip-card-back {
     display: flex;
     flex-direction: column;
     position: relative;
+    border-radius: 10px;
+    overflow: hidden;
 }
 main > div > section:nth-child(1) > ul > li div.flip-card-back > div {
     overflow: scroll;
