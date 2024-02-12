@@ -20,7 +20,7 @@ async function fetchData() {
     document.getElementById("stateText").textContent = "loading";
 
     try {
-        const response = await fetch("./reizen.json", {
+        const response = await fetch("./info.json", {
             method: "GET",
         });
         const jdata = await response.json().then((data) => {
@@ -51,9 +51,6 @@ async function fetchData() {
  * @param {Element} backDiv - The data out of the fetched url
  */
 const addTempToCountries = (weatherData, country, backDiv) => {
-    // const weatherDataStorage = JSON.parse(
-    //     localStorage.getItem("weatherData")
-    // );
     weatherData.locations.forEach((location) => {
         const address = location.address;
         const tempFahrenheit = location.days[0].temp;
@@ -82,9 +79,8 @@ const createCards = async (data) => {
     const countryCards = data.visitedCountries.slice(0, 4); // Limit to the first four elements
 
     const weatherData = await getCountryWeather(countryCards);
-    console.log(weatherData);
     // Stringify the weatherData object before storing it in localStorage
-    // localStorage.setItem("weatherData", JSON.stringify(weatherData));
+    localStorage.setItem("weatherData", JSON.stringify(weatherData));
 
     const cardList = document.querySelector("#cardList");
     countryCards.forEach((country) => {
@@ -101,7 +97,10 @@ const createCards = async (data) => {
         const countryName = document.createElement("h2");
         countryName.textContent = country.country;
         const img = document.createElement("img");
+
         img.src = country.imgUrl;
+        img.setAttribute("loading", "lazy");
+      
         const listWithActivities = document.createElement("ul");
 
         country.recommendations.forEach((recommendation) => {
@@ -113,6 +112,7 @@ const createCards = async (data) => {
         const section = document.createElement("section");
         for (let index = 0; index < country.rating; index++) {
             const svgStar = document.createElement("img");
+            svgStar.setAttribute("loading", "lazy");
             svgStar.src = "images/star.svg";
             section.append(svgStar);
             // TODO 5 - rating = add more empty stars
@@ -121,6 +121,9 @@ const createCards = async (data) => {
         backDiv.append(p);
         backDiv.append(listWithActivities);
         backDiv.append(section);
+        // const weatherDataStorage = JSON.parse(
+        //     localStorage.getItem("weatherData")
+        // );
         if (weatherData) {
             addTempToCountries(weatherData, country.country, backDiv);
         } else {

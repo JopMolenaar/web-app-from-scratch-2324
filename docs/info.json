@@ -1,5 +1,12 @@
 {
-    "name": "Jop Molenaar",
+    "firstName": "Jop",
+    "lastName": "Molenaar",
+    "avatar_url": "",
+    "age": 19,
+    "city": "Haarlem",
+    "hobbies":["", "", ""],
+    "truthsAndLies": ["truth", "truth", "lie"],
+    "favouriteAnimal": "",
     "dateOfBirth": {
         "year": 2004,
         "month": 5,
