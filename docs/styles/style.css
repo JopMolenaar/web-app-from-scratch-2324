@@ -85,7 +85,6 @@ main > div > section:nth-child(1) > ul {
     height: fit-content;
     margin-left: auto;
     margin-right: auto;
-    /* margin-top: auto; */
     margin-top: 5vh;
     margin-bottom: auto;
     display: grid;
@@ -130,17 +129,32 @@ main > div > section:nth-child(1) > ul > li > img {
     transform: translate(-50%, 0);
     border-radius: 10px;
 }
-
+main > div > section:nth-child(1) > ul > li div.flip-card-back {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: scroll;
+}
 main > div > section:nth-child(1) > ul > li div.flip-card-back section {
     width: 100%;
     height: fit-content;
     display: flex;
     justify-content: center;
+    margin-top: auto;
+    margin-bottom: 2.5em;
 }
 main > div > section:nth-child(1) > ul > li div.flip-card-back section img {
     width: 20px;
     height: 20px;
 }
+
+main > div > section:nth-child(1) > ul > li div.flip-card-back p:nth-child(4) {
+position: absolute;
+bottom: 0.5em;
+left: 0.5em;
+padding: 0;
+margin: 0;
+} 
 
 /* Where I want to go section */
 main > div > section:nth-child(2) {
@@ -233,7 +247,7 @@ main > div > section:nth-child(2) img:nth-child(4).inViewPort {
         border-radius: 0 100% 0 0;
     }
 }
-
+/* TODO if the preference for animations is unset */
 main > div > section:nth-child(2) img:nth-child(5) {
     position: absolute;
     bottom: 3em;
@@ -265,7 +279,6 @@ main > div > section:nth-child(2) img:nth-child(5):hover {
     main > div > section:nth-child(2) > section:nth-child(1) {
         grid-row: 2 / 4;
         grid-column: 2 / 4;
-        /* max-width: none; */
     }
     main > div > section:nth-child(2) section:nth-child(1) h2 {
         font-size: 3em;
