@@ -44,13 +44,45 @@ async function fetchData() {
 // https://stackoverflow.com/questions/75564215/show-loading-animation-while-api-is-working-and-show-error
 
 /**
+ * Add the temperature of the country to the country card. We first need to calculate fahrenheit to celsius. 
+ * And after that look at which card to append the p with the temp.
+ * @param {Object} weatherData - The data out of the fetched weather api url
+ * @param {String} country - The data out of the fetched url
+ * @param {Element} backDiv - The data out of the fetched url
+ */
+const addTempToCountries = (weatherData, country, backDiv) =>{
+    // const weatherDataStorage = JSON.parse(
+    //     localStorage.getItem("weatherData")
+    // );
+    weatherData.locations.forEach((location) => {
+        const address = location.address;
+        const tempFahrenheit = location.days[0].temp;
+        const fahrenheitToCelsius = (tempFahrenheit) => {
+            // formula: °C = (°F - 32) × 5/9
+            tempFahrenheit = tempFahrenheit - 32;
+            tempFahrenheit = (tempFahrenheit * 5) / 9;
+            tempFahrenheit = Math.round(tempFahrenheit);
+            return tempFahrenheit;
+        };
+        const tempCelsius = fahrenheitToCelsius(tempFahrenheit);
+        if (address.includes(country)) {
+            console.log(country);
+            const countryTemp = document.createElement("p");
+            countryTemp.textContent = `${tempCelsius} °C`;
+            backDiv.append(countryTemp);
+        }
+    });
+}
+
+/**
  * Create four cards
  * @param {Object} data - The data out of the fetched url
  */
 const createCards = async (data) => {
     const countryCards = data.visitedCountries.slice(0, 4); // Limit to the first four elements
-    // const weatherData = await getCountryWeather(countryCards);
-    // console.log(weatherData);
+    
+    const weatherData = await getCountryWeather(countryCards);
+    console.log(weatherData);
     // Stringify the weatherData object before storing it in localStorage
     // localStorage.setItem("weatherData", JSON.stringify(weatherData));
 
@@ -89,29 +121,7 @@ const createCards = async (data) => {
         backDiv.append(p);
         backDiv.append(listWithActivities);
         backDiv.append(section);
-
-        // Retrieve the weatherData object from localStorage and parse it back to an object
-        const weatherDataStorage = JSON.parse(
-            localStorage.getItem("weatherData")
-        );
-        weatherDataStorage.locations.forEach((location) => {
-            const address = location.address;
-            const tempFahrenheit = location.days[0].temp;
-            const fahrenheitToCelsius = (tempFahrenheit) => {
-                // formula: °C = (°F - 32) × 5/9
-                tempFahrenheit = tempFahrenheit - 32;
-                tempFahrenheit = (tempFahrenheit * 5) / 9;
-                tempFahrenheit = Math.round(tempFahrenheit);
-                return tempFahrenheit;
-            };
-            const tempCelsius = fahrenheitToCelsius(tempFahrenheit);
-            if (address.includes(country.country)) {
-                console.log(country.country);
-                const countryTemp = document.createElement("p");
-                countryTemp.textContent = `${tempCelsius} °C`;
-                backDiv.append(countryTemp);
-            }
-        });
+        addTempToCountries(weatherData, country.country, backDiv)
 
         frontDiv.append(img);
         frontDiv.append(countryName);
@@ -123,6 +133,7 @@ const createCards = async (data) => {
         cardList.append(li);
     });
 };
+
 
 /**
  * Add content to the second section of the page
