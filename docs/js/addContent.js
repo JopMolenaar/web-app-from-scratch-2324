@@ -44,13 +44,13 @@ async function fetchData() {
 // https://stackoverflow.com/questions/75564215/show-loading-animation-while-api-is-working-and-show-error
 
 /**
- * Add the temperature of the country to the country card. We first need to calculate fahrenheit to celsius. 
+ * Add the temperature of the country to the country card. We first need to calculate fahrenheit to celsius.
  * And after that look at which card to append the p with the temp.
  * @param {Object} weatherData - The data out of the fetched weather api url
  * @param {String} country - The data out of the fetched url
  * @param {Element} backDiv - The data out of the fetched url
  */
-const addTempToCountries = (weatherData, country, backDiv) =>{
+const addTempToCountries = (weatherData, country, backDiv) => {
     // const weatherDataStorage = JSON.parse(
     //     localStorage.getItem("weatherData")
     // );
@@ -72,7 +72,7 @@ const addTempToCountries = (weatherData, country, backDiv) =>{
             backDiv.append(countryTemp);
         }
     });
-}
+};
 
 /**
  * Create four cards
@@ -80,7 +80,7 @@ const addTempToCountries = (weatherData, country, backDiv) =>{
  */
 const createCards = async (data) => {
     const countryCards = data.visitedCountries.slice(0, 4); // Limit to the first four elements
-    
+
     const weatherData = await getCountryWeather(countryCards);
     console.log(weatherData);
     // Stringify the weatherData object before storing it in localStorage
@@ -121,7 +121,13 @@ const createCards = async (data) => {
         backDiv.append(p);
         backDiv.append(listWithActivities);
         backDiv.append(section);
-        addTempToCountries(weatherData, country.country, backDiv)
+        if (weatherData) {
+            addTempToCountries(weatherData, country.country, backDiv);
+        } else {
+            const countryTemp = document.createElement("p");
+            countryTemp.textContent = `-- °C`;
+            backDiv.append(countryTemp);
+        }
 
         frontDiv.append(img);
         frontDiv.append(countryName);
@@ -133,7 +139,6 @@ const createCards = async (data) => {
         cardList.append(li);
     });
 };
-
 
 /**
  * Add content to the second section of the page
