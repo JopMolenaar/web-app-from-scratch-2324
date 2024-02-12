@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     scroll-behavior: none;
 }
 ::-webkit-scrollbar {
@@ -291,7 +291,7 @@ main > div > section:nth-child(2) img:nth-child(5):hover {
         grid-column: 2 / 4;
     }
     main > div > section:nth-child(2) section:nth-child(1) h2 {
-        font-size: 3em;
+        font-size: 2.8em;
     }
     main > div > section:nth-child(2) section:nth-child(1) p:nth-child(2) {
         font-size: 1.2em;
@@ -328,6 +328,10 @@ main > div > section:nth-child(2) img:nth-child(5):hover {
     }
     main > div > section:nth-child(1) > section > h2 {
         font-size: 2em;
+        padding: 0;
+    }
+    main > div > section:nth-child(1) > section > p {
+        padding: 0;
     }
     main > div > section:nth-child(1) > ul {
         margin-top: auto;
