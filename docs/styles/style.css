@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     scroll-behavior: none;
 }
 ::-webkit-scrollbar {
@@ -75,6 +75,9 @@ main > div > section:nth-child(1) section > p {
     max-width: 80vw;
     margin-top: 1em;
     min-width: 20em;
+}
+main > div > section:nth-child(1) section > h2 {
+    margin-top: 1.5em;
 }
 
 main > div > section:nth-child(1) > ul {
@@ -206,9 +209,22 @@ main > div > section:nth-child(2) section:nth-child(2) {
     padding: 1em;
     grid-row: 4 / 5;
     grid-column: 2 / 3;
+    background-color: rgb(244, 204, 154);
+    border-radius: 0 0 10px 0;
+    border-top: solid 50px  rgb(233, 192, 141);
+    width: fit-content;
+    height: fit-content;
+    margin-right: 1em
 }
 main > div > section:nth-child(2) section:nth-child(2).inViewPort {
     animation: fade-in 1s ease-in;
+}
+main > div > section:nth-child(2) section:nth-child(2) h3 {
+    margin-top: 0;
+}
+main > div > section:nth-child(2) section:nth-child(2) ul li {
+    border-bottom: black 1px solid;
+    list-style-type: square;
 }
 main > div > section:nth-child(2) img:nth-child(3) {
     grid-row: 1 / 2;
@@ -318,6 +334,7 @@ main > div > section:nth-child(2) img:nth-child(5):hover {
         flex-direction: row;
         align-items: center;
         gap: 5em;
+        justify-content: center;
     }
     main > div > section:nth-child(1) > section {
         display: flex;
@@ -329,6 +346,7 @@ main > div > section:nth-child(2) img:nth-child(5):hover {
     main > div > section:nth-child(1) > section > h2 {
         font-size: 2em;
         padding: 0;
+        margin-top: 0em;
     }
     main > div > section:nth-child(1) > section > p {
         padding: 0;
