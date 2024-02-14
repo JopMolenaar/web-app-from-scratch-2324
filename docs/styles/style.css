@@ -181,13 +181,15 @@ main > div > section:nth-child(1) > ul > li div.flip-card-back ul li {
     padding-right: 1em;
 }
 main > div > section:nth-child(1) > ul > li div.flip-card-back section {
-    width: 100%;
     height: fit-content;
     display: flex;
     justify-content: center;
     margin-top: auto;
-    margin-bottom: 1em;
-    padding-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 main > div > section:nth-child(1) > ul > li div.flip-card-back section img {
     width: 20px;
@@ -360,7 +362,6 @@ main > div > section:nth-child(2) img:nth-child(5) {
     main > div > section:nth-child(1) > ul > li {
         height: 30svh;
     }
-
 }
 
 @media (min-height: 50em) {

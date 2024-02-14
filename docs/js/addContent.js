@@ -9,14 +9,11 @@ let root = document.documentElement;
 // Javascript is working so set the stateText that the js is not working on display none
 document.getElementById("stateText").style.display = "none";
 
-// loading state
-window.onload = fetchData();
-
 /**
  * Async function to fetch the data when the document windows loads.
  * @param {Object} data - The data out of the fetched url
  */
-async function fetchData() {
+const fetchData = async () => {
     // loader
     document.getElementById("stateText").style.display = "flex";
     document.querySelector("#stateText p").textContent =
@@ -49,6 +46,8 @@ async function fetchData() {
     }
 }
 // https://stackoverflow.com/questions/75564215/show-loading-animation-while-api-is-working-and-show-error
+
+window.onload = fetchData();
 
 /**
  * Add the temperature of the country to the country card. We first need to calculate fahrenheit to celsius.
@@ -131,9 +130,7 @@ const createCards = async (data) => {
         contentScrollDiv.append(listWithActivities);
         contentScrollDiv.append(section);
         backDiv.append(contentScrollDiv);
-        // const weatherDataStorage = JSON.parse(
-        //     localStorage.getItem("weatherData")
-        // );
+
         if (weatherData) {
             addTempToCountries(weatherData, country.country, backDiv);
         } else {
