@@ -30,9 +30,9 @@ This assignment was more focused on Javascript and API's. Almost all the data yo
 
 1. Clone the repository:
 
-```
-git clone https://github.com/JopMolenaar/web-app-from-scratch-2324.git
-```
+    ```
+    git clone https://github.com/JopMolenaar/web-app-from-scratch-2324.git
+    ```
 
 2. Open the cloned file with your code editor and start coding!
 
