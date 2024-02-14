@@ -4,35 +4,42 @@
 
 ## Dag 1
 
-Beetje beginnen met mijn website, json content maken, en al inladen
+Begonnen met mijn website
+Json content gemaakt, en al ingeladen op de webpagina. 
 
 ## Dag 2
 
-Verder met mijn website, meer focussen op de content en UI, backend opgezet maar wist nog niet precies wat ik er mee moest.
+Verder met mijn website, meer gefocust op de content en UI. 
+Ook heb ik die dag de backend opgezet maar wist nog niet precies wat ik er mee moest.
 
 ## Dag 3
 
-Verder met mijn website, flip kaartjes werkend gekregen en als je omlaag scrollt dan beweegt de header img van japan
+Deze dag heb ik de flip kaartjes werkend gekregen en als je omlaag scrollt dan beweegt de header img van japan omlaag.
 
 ## Dag 4
 
-Ging verder met mijn website en vandaag viel het kwartje met template engines en backend ipv create alle elements met js :0
+Deze dag ging ik verder met mijn website en vandaag viel het kwartje met template engines en backend ipv createElements met js.
 
-Ik dacht de heleboel om te gooien maar daarna bedacht ik bij mezelf dat dat meer backend is en ik dan minder vanilla js schrijf terwijl dat de opdracht is. Ook is het meer werk en wil ook genoeg andere dingen nog doen. Het is fijn dat het kwartje viel want dat betekent dat ik weer een extra inzicht heb over hoe het web kan werken.
+Ik dacht de heleboel om te gooien maar bedacht bij mezelf dat dat meer backend is en ik dan minder vanilla js schrijf terwijl dat de opdracht is. Ook is het meer werk en wil ook genoeg andere dingen nog doen. Het is fijn dat het kwartje viel want dat betekent dat ik weer een extra inzicht heb over hoe het web kan werken.
 
 Ook heb ik deze dag feedback gekregen en deze punten waren:
 
--
+- Dat ik het font direct moest veranderen. Ik gebruikte het default font nog en had het uitgesteld.
+- Prio geven aan "Make it work" en daarna mooi maken, en daarna pas snel.
+- Er werd mij aangeraden om een api te gebruiken die iets met landen had. 
 
 ## Dag 5
 
-Vandaag ging ik bezig met de scroll animaties. Ik had hier al eerder mee gewerkt maar kon de code niet terug vinden, and was begin deze week al bezig met zoeken naar de juiste code maar kon ik niet vinden, totdat ik deze video tegen kwam:
-Dit kwam echt super goed uit want het gebruikt geen js, wat we ook zo min mogelijk moesten gebruiken uit kilians presentatie, en het had de scroll animaties die ik nodig had.
+Vandaag ging ik bezig met de scroll animaties. Ik had dit al eerder gedaan maar kon de code niet meer terug vinden. Ik was begin deze week al bezig met zoeken naar de juiste code maar kon ik niet vinden, totdat ik deze video tegen kwam:
 
-Wel kwam ik tegen een groot probleem. Dit was namelijk dat ik een scroll snap heb gebruikt voor mijn 2 secties, als je omlaag scrollde snap je op de tweede section en omhoog op de eerste. Dit is leuk, maar kan niet op het main element worden gedaan. Daarom had ik een div gebruikt maar dan scroll je niet op de pagina, maar op de div, dus dan werkt `animation-timeline: view();` niet.
-En aangezien ik de js code al had voor de header img was het best ez om dat dan ook te doen voor de andere images.
+[Incredible scroll-based animations with CSS-only](https://www.youtube.com/watch?v=UmzFk68Bwdk)
 
-Ik had dit:
+Dit kwam echt super goed uit want het gebruikt geen js, had de scroll animaties die ik nodig had, en uit kilians presentatie kwam dat we zo min mogelijk javascript moesten gebruiken.
+
+Wel kwam ik tegen een groot probleem. Dit was namelijk dat ik een scroll snap heb gebruikt voor mijn 2 secties, als je omlaag scrollde snap je op de tweede section en omhoog op de eerste. Dit is leuk, maar kan niet op het `main` element worden gedaan. Daarom had ik een div gebruikt maar dan scroll je niet op de pagina, maar op de div, dus dan werkt `animation-timeline: view();` niet.
+En aangezien ik de js code al had voor de header img was het best makkwlijk om dat dan ook te doen voor de andere images. Wel ga ik `animation-timeline: view();` gebruiken voor mijn persoonlijke blog. 
+
+De code die ik had moest wel even omschrijven zodat het wat dynamischer werd. dus ik had dit:
 
 ```js
 const div = document.querySelector("main > div");
@@ -63,7 +70,7 @@ div.addEventListener("scroll", function () {
 });
 ```
 
-Naar dit:
+Naar dit geschreven:
 
 ```js
 const div = document.querySelector("main > div");
@@ -117,15 +124,20 @@ div.addEventListener("scroll", () => {
 
 ## Weekend
 
-In het weekend heb ik gewerkt aan de styling van mijn eigen site 
+In het weekend heb ik gewerkt aan de styling van mijn eigen site. Dit deed ik in een rustig tempo en liep nergens echt tegen aan. 
 
 ## Dag 6
 
-Deze maandag begon ik met de laatste dingen afvinken. Ik moest nog wat states toevoegen, toegangelijkheid verbeteren. Ook was ik bezig met het efficient inladen van de afbeelding op mijn pagina. Dit lukte niet echt. Ik probeerde iets met // Generate a unique cache-busting parameter
+Deze maandag begon ik met de laatste dingen afvinken. Ik moest nog wat states toevoegen en toegangelijkheid verbeteren. Ook was ik bezig met het efficient inladen van de afbeelding op mijn pagina. Dit lukte niet echt. Ik probeerde iets met:
+```js
+/// generate a unique cache-busting parameter
 const cacheBuster = new Date().getTime();
 
 // Set the low, medium, and high resolution image sources with the cache-buster parameter
 imgElement.srcset = `low-res.jpg?${cacheBuster} 200w, medium-res.jpg?${cacheBuster} 500w, high-res.jpg?${cacheBuster} 1000w`;
+```
+
+Maar dit werkte voor geen meter. Verder kwam ik er niet uit dus besloot ik het om het te laten, en later pas te proberen het sneller te maken. 
 
 ## Dag 7
 
@@ -156,7 +168,11 @@ Daarna geef ik die array aan de functie die de gradient voor dat land aanmaakt, 
 
 De laaste dag heb ik de functie van gisteren nog wat korter geschreven en gedocumenteerd. Heb ik dit verslag uitgeschreven, en nog wat laaste documentatie geregeld.
 
-Ik kwam er wel achter dat ik niet kon tabben op mijn kaartjes, dit moest ik wel hee snel fixen. Ik was een beetje bzig om een button of linkje in the cards te zetten en dan met js te zorgen dat het dan omdraaid als je erop klikt. Maar dit lukte mij niet. Toen zij Joppe uiot mijn groepje opeens dat tab-index bestond, had ik al wel een keer van gehoord maar was ik allang weer vergeten. Dit voegde ik toe op de div's en met:
+Ook opende ik mijn site op mobiel, en die was niet heel mooi. Dit moest ik ook gaan fixen met media queries. 
+
+### Toegankelijkheids testje 
+
+Ik kwam er vandaag wel achter dat ik niet kon tabben op mijn kaartjes, en dit moest ik wel snel fixen. Ik was een beetje bezig om een button of linkje in the cards te zetten en dan met js te zorgen dat het dan omdraaid als je erop klikt. Maar dit lukte mij niet. Toen zij Joppe uiot mijn groepje opeens dat tab-index bestond, had ik al wel een keer van gehoord maar was ik allang weer vergeten. Dit voegde ik toe op de div's en met deze code hieronder zorgde ik ervoor dat je erop kon klikken met enter. 
 
 ```js
 document.body.addEventListener("keydown", (event) => {
@@ -164,38 +180,4 @@ document.body.addEventListener("keydown", (event) => {
         flipTheCards(event.target);
     }
 });
-```
-
-Zorgde ik ervoor dat je erop kon klikken met enter. 
-
-
-Ook opende ik mijn site op mobiel, en die was niet heel mooi. Dit moest ik ook gaan fixen met media queries. 
-
-<!-- Feedback:
-font veranderen
-Make it work
-Maak er iets visueel tofs van, fade in als je scrolled, loading state, hover, empty state
-
-Weather api met weer afbeelding links onder, en iets cools aan de andere kant van de
- -->
-
-```
-        <% data.visitedCountries.forEach(function(country){ %>
-                         <%- include('user/show', {user: user}); %>
-
-                       <li>
-                            <div>
-                                <div>
-                                    <h2><%= country.country %></h2>
-                                    <img src="" alt="" />
-                                </div>
-                                <div>
-                                    <h2></h2>
-                                    <p></p>
-                                    <ul></ul>
-                                    <section></section>
-                                </div>
-                            </div>
-                        </li>
-                        <% }); %> -->
 ```
