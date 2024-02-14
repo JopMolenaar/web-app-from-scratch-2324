@@ -58,11 +58,9 @@ This assignment was more focused on Javascript and API's. Almost all the data yo
 
 The page that is partially generated with ejs and backend, will be accessible at `http://localhost:3000/backendPage`. And the index.html page that is now hosted with the localhost, will be accessible at `http://localhost:3000`.
 
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
 ## Use of features
 
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
+The only real features on this webiste are the turning cards. When you click on a visited country card, it turns around and then you can see my experience with it. 
 
 ## External data source properties
 
@@ -84,13 +82,18 @@ For more info: [www.visualcrossing.com/...](https://www.visualcrossing.com/resou
 
 ## Whishlist
 
+- [x] Cool scrolling animations
+- [x] Responsive design
+- [x] cards that turn around when you click on them
+- [x] Dynamic loaded data from the local json file
+- [x] The use of a weather api on the back of the countrycard 
+
 What I want to add in the future are:
 
-- 
-- 
-- 
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+- [] accessible for everyone
+- [] Darkmode
+- [] Goodlooking progressive enhancement states
+- [] Goodlooking error and loading states
 
 ## License
 
