@@ -68,28 +68,28 @@
         {
             "country": "Spain",
             "recommendations": ["", "", ""],
-            "rating": 0,
+            "rating": 4,
             "experience": "blablabla",
             "imgUrl": ""
         },
         {
             "country": "Italy",
             "recommendations": ["", "", ""],
-            "rating": 0,
+            "rating": 4,
             "experience": "blablabla",
             "imgUrl": ""
         },
         {
             "country": "Portugal",
             "recommendations": ["", "", ""],
-            "rating": 0,
+            "rating": 4,
             "experience": "blablabla",
             "imgUrl": ""
         },
         {
             "country": "France",
             "recommendations": ["", "", ""],
-            "rating": 0,
+            "rating": 4,
             "experience": "blablabla",
             "imgUrl": ""
         },
@@ -97,14 +97,14 @@
         {
             "country": "Austria",
             "recommendations": ["", "", ""],
-            "rating": 0,
+            "rating": 4,
             "experience": "blablabla",
             "imgUrl": ""
         },
         {
             "country": "Germany",
             "recommendations": ["", "", ""],
-            "rating": 0,
+            "rating": 4,
             "experience": "blablabla",
             "imgUrl": ""
         },
@@ -112,15 +112,36 @@
         {
             "country": "Belgium",
             "recommendations": ["", "", ""],
-            "rating": 0,
+            "rating": 4,
             "experience": "blablabla",
             "imgUrl": ""
         },
         {
             "country": "Netherlands",
             "recommendations": ["", "", ""],
-            "rating": 0,
+            "rating": 4,
             "experience": "I live here :)",
+            "imgUrl": ""
+        },
+        {
+            "country": "Slovenia",
+            "recommendations": ["", "", ""],
+            "rating": 4,
+            "experience": "I live here :)",
+            "imgUrl": ""
+        },
+        {
+            "country": "Israel",
+            "recommendations": ["", "", ""],
+            "rating": 4,
+            "experience": "blablabla",
+            "imgUrl": ""
+        },
+        {
+            "country": "West Bank",
+            "recommendations": ["", "", ""],
+            "rating": 4,
+            "experience": "blablabla",
             "imgUrl": ""
         }
     ],
