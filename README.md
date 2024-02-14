@@ -20,7 +20,6 @@ This assignment was more focused on Javascript and API's. Almost all the data yo
 - External data source properties
 - Whishlist
 - License
-- Sources
 
 <!-- features -->
 
