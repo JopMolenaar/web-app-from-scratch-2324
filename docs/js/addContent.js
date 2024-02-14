@@ -142,8 +142,8 @@ const createCards = async (data) => {
             backDiv.append(countryTemp);
         }
 
-        frontDiv.append(img);
         frontDiv.append(countryName);
+        frontDiv.append(img);
 
         innerDiv.append(frontDiv);
         innerDiv.append(backDiv);

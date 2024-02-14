@@ -19,7 +19,7 @@ const elementsToAnimate = [
     },
     {
         element:
-            "main > div > section:nth-child(2) section:nth-child(1) h2 span",
+            "main > div > section:nth-child(2) div h2 span",
         topOrBottom: "bottom",
     },
     {
