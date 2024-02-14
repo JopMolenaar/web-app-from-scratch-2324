@@ -32,7 +32,6 @@ const getCountryWeather = async (countries) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
-    
                 return response.json();
             });
         return await countryWeathersData;

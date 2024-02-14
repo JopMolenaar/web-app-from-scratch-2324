@@ -87,13 +87,14 @@ For more info: [www.visualcrossing.com/...](https://www.visualcrossing.com/resou
 - [x] cards that turn around when you click on them
 - [x] Dynamic loaded data from the local json file
 - [x] The use of a weather api on the back of the countrycard 
+- [x] accessible for everyone
+- [x] Darkmode
 
 What I want to add in the future are:
 
-- [ ] accessible for everyone
-- [ ] Darkmode
 - [ ] Goodlooking progressive enhancement states
 - [ ] Goodlooking error and loading states
+- [ ] Left over empty stars next to the filled stars
 
 ## License
 
