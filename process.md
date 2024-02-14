@@ -170,7 +170,7 @@ De laaste dag heb ik de functie van gisteren nog wat korter geschreven en gedocu
 
 Ook opende ik mijn site op mobiel, en die was niet heel mooi. Dit moest ik ook gaan fixen met super kleine media queries. 
 
-Ook heb ik de code door de validator gehaald en nog de laatste dingen gefixed
+Ook heb ik de code door de validator gehaald en nog de laatste dingen gefixed. Een van die dingen die cruciaal was voor de styling gaf een error. Namelijk het gebruik van `svh`, small viewport height. Dit heb ik toen terug moeten veranderen naar vh, maar zorgt er dus wel voor dat de viewport onder de browser balk gaat op mobiel. 
 
 ### Toegankelijkheids testje 
 

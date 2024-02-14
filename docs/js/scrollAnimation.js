@@ -28,6 +28,11 @@ const elementsToAnimate = [
     },
 ];
 
+/**
+ * Look if element is in the vp
+ * @param {Element} element - html element to animate
+ * @param {String} topOrBottom - String that says where to look if its in the vp, before playing the animation
+ */
 const isInViewport = (element, topOrBottom) => {
     const rect = element.getBoundingClientRect();
     if (topOrBottom === "top") {
@@ -49,10 +54,11 @@ const isInViewport = (element, topOrBottom) => {
     }
 };
 
+// When scrolling on the div, add .inViewPort if its in the vp
 div.addEventListener("scroll", () => {
     elementsToAnimate.forEach((object) => {
         const element = document.querySelector(`${object.element}`);
-        visible = isInViewport(element, object.topOrBottom);
+        visible = isInViewport(element, object.topOrBottom); // look if its visible
         if (visible === true) {
             element.classList.add("inViewPort");
         } else {
