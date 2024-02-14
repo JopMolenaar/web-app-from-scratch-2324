@@ -74,7 +74,8 @@ https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timel
 
 The encodedCityList looks like: `London%2CUK%7CParis%2CFrance%7CTokyo%2CJapan%7CCape%20Town%2C%20South%20Africa`, but is made like this in the js.
 
-The response consists out of four countries, with the current weathercondition and the upcoming 7 days weatherconditions.
+The response consists out of four countries, with the current weathercondition and the upcoming 7 days weatherconditions. 
+We can call this api a 1000 times per day.
 For more info: [www.visualcrossing.com/...](https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/)
 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
