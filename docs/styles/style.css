@@ -28,6 +28,7 @@ header h1 {
 header img {
     width: auto;
     height: 90%;
+    border-radius: 50%;
 }
 
 /* main */
