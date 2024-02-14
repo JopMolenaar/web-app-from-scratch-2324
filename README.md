@@ -14,8 +14,13 @@ This assignment was more focused on Javascript and API's. Almost all the data yo
 
 ## Table of contents
 
-[Installation](##Installation)  
-[If you want the backend too](##If-you-want-the-backend-too) 
+- Installation
+- If you want the backend too
+- Use of features
+- External data source properties
+- Whishlist
+- License
+- Sources
 
 <!-- features -->
 
