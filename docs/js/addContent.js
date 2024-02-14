@@ -14,6 +14,7 @@ document.getElementById("stateText").style.display = "none";
  * @param {Object} data - The data out of the fetched url
  */
 const fetchData = async () => {
+    try {
     // loader
     document.getElementById("stateText").style.display = "flex";
     document.querySelector("#stateText p").textContent =
@@ -43,6 +44,9 @@ const fetchData = async () => {
             "There is an error with fetching the data";
         document.querySelector("#stateText img").src = "";
         root.style.setProperty("--color-state", "red");
+    }
+    } catch (error) {
+        console.error(error);
     }
 }
 // https://stackoverflow.com/questions/75564215/show-loading-animation-while-api-is-working-and-show-error
@@ -81,73 +85,80 @@ const addTempToCountries = (weatherData, country, backDiv) => {
  * @param {Object} data - The data out of the fetched url
  */
 const createCards = async (data) => {
-    const countryCards = data.visitedCountries.slice(0, 4); // Limit to the first four elements
+    try {
+        const countryCards = data.visitedCountries.slice(0, 4); // Limit to the first four elements
 
-    const weatherData = await getCountryWeather(countryCards);
-    // Stringify the weatherData object before storing it in localStorage
-    localStorage.setItem("weatherData", JSON.stringify(weatherData));
-
-    const cardList = document.querySelector("#cardList");
-    countryCards.forEach((country) => {
-        const innerDiv = document.createElement("div");
-        innerDiv.classList.add("flip-card-inner");
-        innerDiv.setAttribute("tabindex", "0");
-        const backDiv = document.createElement("div");
-        backDiv.classList.add("flip-card-back");
-        const frontDiv = document.createElement("div");
-        frontDiv.classList.add("flip-card-front");
-        const li = document.createElement("li");
-        li.classList.add("flip-card");
-        const contentScrollDiv = document.createElement("div");
-        const p = document.createElement("p");
-        p.textContent = country.experience;
-        const countryName = document.createElement("h2");
-        countryName.textContent = country.country;
-        const img = document.createElement("img");
-
-        img.src = country.imgUrl;
-        img.alt = country.imgAlt;
-        img.setAttribute("loading", "lazy");
-
-        const listWithActivities = document.createElement("ul");
-
-        country.recommendations.forEach((recommendation) => {
-            const listItemWithActivity = document.createElement("li");
-            listItemWithActivity.textContent = recommendation;
-            listWithActivities.append(listItemWithActivity);
+        const weatherData = await getCountryWeather(countryCards);
+        // Stringify the weatherData object before storing it in localStorage
+        localStorage.setItem("weatherData", JSON.stringify(weatherData));
+    
+        const cardList = document.querySelector("#cardList");
+        countryCards.forEach((country) => {
+            const innerDiv = document.createElement("div");
+            innerDiv.classList.add("flip-card-inner");
+            innerDiv.setAttribute("tabindex", "0");
+            const backDiv = document.createElement("div");
+            backDiv.classList.add("flip-card-back");
+            const frontDiv = document.createElement("div");
+            frontDiv.classList.add("flip-card-front");
+            const li = document.createElement("li");
+            li.classList.add("flip-card");
+            const contentScrollDiv = document.createElement("div");
+            const p = document.createElement("p");
+            p.textContent = country.experience;
+            const countryName = document.createElement("h2");
+            countryName.textContent = country.country;
+            const img = document.createElement("img");
+    
+            img.src = country.imgUrl;
+            img.alt = country.imgAlt;
+            img.setAttribute("loading", "lazy");
+    
+            const suggestionsHeading = document.createElement("h3");
+            suggestionsHeading.textContent = "Suggestions"
+            const listWithActivities = document.createElement("ul");
+    
+            country.recommendations.forEach((recommendation) => {
+                const listItemWithActivity = document.createElement("li");
+                listItemWithActivity.textContent = recommendation;
+                listWithActivities.append(listItemWithActivity);
+            });
+    
+            const section = document.createElement("section");
+            for (let index = 0; index < country.rating; index++) {
+                const svgStar = document.createElement("img");
+                svgStar.setAttribute("loading", "lazy");
+                svgStar.src = "images/star.svg";
+                section.append(svgStar);
+                // TODO 5 - rating = add more empty stars
+            }
+    
+            contentScrollDiv.append(p);
+            contentScrollDiv.append(suggestionsHeading);
+            contentScrollDiv.append(listWithActivities);
+            contentScrollDiv.append(section);
+            backDiv.append(contentScrollDiv);
+    
+            if (weatherData) {
+                addTempToCountries(weatherData, country.country, backDiv);
+            } else {
+                const countryTemp = document.createElement("p");
+                countryTemp.textContent = `-- °C`;
+                backDiv.append(countryTemp);
+            }
+    
+            frontDiv.append(countryName);
+            frontDiv.append(img);
+    
+            innerDiv.append(frontDiv);
+            innerDiv.append(backDiv);
+    
+            li.append(innerDiv);
+            cardList.append(li);
         });
-
-        const section = document.createElement("section");
-        for (let index = 0; index < country.rating; index++) {
-            const svgStar = document.createElement("img");
-            svgStar.setAttribute("loading", "lazy");
-            svgStar.src = "images/star.svg";
-            section.append(svgStar);
-            // TODO 5 - rating = add more empty stars
-        }
-
-        contentScrollDiv.append(p);
-        contentScrollDiv.append(listWithActivities);
-        contentScrollDiv.append(section);
-        backDiv.append(contentScrollDiv);
-
-        if (weatherData) {
-            addTempToCountries(weatherData, country.country, backDiv);
-        } else {
-            const countryTemp = document.createElement("p");
-            countryTemp.textContent = `-- °C`;
-            backDiv.append(countryTemp);
-        }
-
-        frontDiv.append(countryName);
-        frontDiv.append(img);
-
-        innerDiv.append(frontDiv);
-        innerDiv.append(backDiv);
-
-        li.append(innerDiv);
-        cardList.append(li);
-    });
+    } catch (error) {
+        console.error(error);
+    }
 };
 
 /**

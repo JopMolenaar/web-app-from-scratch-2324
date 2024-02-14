@@ -169,6 +169,7 @@ main > div > section:nth-child(1) > ul > li div.flip-card-back {
 main > div > section:nth-child(1) > ul > li div.flip-card-back > div {
     overflow: scroll;
     height: 100%;
+    margin-bottom: 2.5em;
 }
 main > div > section:nth-child(1) > ul > li div.flip-card-back p:nth-child(1) {
     padding: 1em;
