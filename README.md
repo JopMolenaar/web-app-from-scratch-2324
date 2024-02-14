@@ -2,7 +2,7 @@
 
 ## Description
 
-I made an one page website, with two sections, about which four countries are the besta and most recent I have been to. The other section is about the country I want to go to the most. 
+I made an one page website, with two sections, about which four countries are the best and most recent I have been to. The other section is about the country I want to go to the most. 
 These two sections snap when you scroll, and when you enter the last section, you can see some beautifull scroll animtions.
 
 This assignment was more focused on Javascript and API's. Almost all the data you see on the page is loaded dynamiclly out of a json file and a weather api. 
@@ -56,8 +56,7 @@ This assignment was more focused on Javascript and API's. Almost all the data yo
    npm start
    ```
 
-- The page that is partially generated with ejs and backend, will be accessible at `http://localhost:3000/backendPage`.
-- The index.html page that is now hosted with the localhost, will be accessible at `http://localhost:3000`.
+The page that is partially generated with ejs and backend, will be accessible at `http://localhost:3000/backendPage`. And the index.html page that is now hosted with the localhost, will be accessible at `http://localhost:3000`.
 
 <!-- ...but how does one use this project? What are its features 🤔 -->
 
@@ -98,3 +97,38 @@ What I want to add in the future are:
 My website is open-source and released under the [MIT License](LICENSE).
 
 ## Sources
+
+<!-- costa rica url -->
+<!-- https://www.google.com/search?sca_esv=7ec80514b65b74c1&sxsrf=ACQVn09rjC2rYX7-lijLe0tIXHMCW7oUcA:1707215307796&q=costa+rica+photo&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjdjufPwJaEAxVOiv0HHe0dD0EQ0pQJegQIDRAB&biw=876&bih=1008&dpr=2#imgrc=N5eQGSEdiygMuM -->
+
+<!-- bangkok url -->
+<!-- https://www.google.com/search?q=bankok+photo&tbm=isch&ved=2ahUKEwjNtZirw5aEAxUZuP0HHbVwCK8Q2-cCegQIABAA&oq=bankok+photo&gs_lp=EgNpbWciDGJhbmtvayBwaG90bzIHEAAYgAQYE0jHEFAAWIsOcAF4AJABAJgBhQKgAaIGqgEFNS4wLjK4AQPIAQD4AQGKAgtnd3Mtd2l6LWltZ8ICCBAAGAcYHhgTwgIGEAAYBxgewgIGEAAYCBgeiAYB&sclient=img&ei=pAzCZc3TEpnw9u8PteGh-Ao&bih=1008&biw=876#imgrc=cfEz7jE5cRkDPM&imgdii=XQwwvypFIlFkpM -->
+
+<!-- switzerland url -->
+<!-- https://www.google.com/search?sca_esv=7ec80514b65b74c1&sxsrf=ACQVn0_fHrRjjEt79YKktw6hZh1DHpTP_g:1707216429392&q=switzerland&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiu_s_mxJaEAxUbgv0HHYCGBlcQ0pQJegQICxAB&biw=876&bih=1008&dpr=2#imgrc=SmNTc-Wnwh4_qM -->
+
+<!-- croatio url -->
+<!-- https://www.google.com/search?sca_esv=7ec80514b65b74c1&sxsrf=ACQVn08gNPCsP1mxSxOPvR1aFHKWcjRyfA:1707216573478&q=croatia&tbm=isch&source=lnms&sa=X&sqi=2&ved=2ahUKEwjJs6qrxZaEAxX3iv0HHcphAwsQ0pQJegQIDhAB&biw=876&bih=1008&dpr=2#imgrc=bO8T9_3V5kdliM -->
+
+<!-- star url -->
+<!-- https://www.google.com/search?q=star+image+png&tbm=isch&ved=2ahUKEwiZ3Py6h5mEAxWTn_0HHcTyAREQ2-cCegQIABAA&oq=star+image+png&gs_lp=EgNpbWciDnN0YXIgaW1hZ2UgcG5nMgcQABiABBgTMggQABgHGB4YEzIIEAAYBxgeGBMyCBAAGAcYHhgTMggQABgHGB4YEzIIEAAYBxgeGBMyCBAAGAcYHhgTMggQABgHGB4YEzIIEAAYBxgeGBMyCBAAGAcYHhgTSN4JUOwHWOwHcAB4AJABAJgBwAGgAdsCqgEDMC4yuAEDyAEA-AEBigILZ3dzLXdpei1pbWfCAgQQIxgnwgIIEAAYCBgeGBOIBgE&sclient=img&ei=gmDDZZmTHpO_9u8PxOWHiAE&bih=1008&biw=1222#imgrc=LuWPo96zsnTMgM&imgdii=pMxVWPlb7sjnBM -->
+
+<!-- photo japan Lands -->
+<!-- https://www.google.com/search?sca_esv=30ba42da69d2c19f&sxsrf=ACQVn08hCVNWO1crst8OLfgsMzrVDrK20Q:1707140830784&q=japan+images&tbm=isch&source=lnms&sa=X&sqi=2&ved=2ahUKEwj_mbOWq5SEAxUHi_0HHQCeDp4Q0pQJegQICxAB&biw=767&bih=1008&dpr=2#imgrc=xjyss59VuaRNfM&imgdii=Wtux9k75AD6k6M -->
+
+<!-- photo japan city -->
+<!-- https://www.google.com/search?sca_esv=30ba42da69d2c19f&sxsrf=ACQVn08hCVNWO1crst8OLfgsMzrVDrK20Q:1707140830784&q=japan+images&tbm=isch&source=lnms&sa=X&sqi=2&ved=2ahUKEwj_mbOWq5SEAxUHi_0HHQCeDp4Q0pQJegQICxAB&biw=767&bih=1008&dpr=2#imgrc=tfm156pVr6kE4M -->
+
+<!-- placeholder img -->
+<!-- https://www.google.com/search?sca_esv=e723f428ea636eb3&sxsrf=ACQVn0_aPFc9E4Y6aMkqtiPFvyzvXsgd5Q:1707475737630&q=placeholder+img&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjW5bbmip6EAxWy3AIHHS_wBX0Q0pQJegQICRAB&biw=688&bih=1008&dpr=2#imgrc=vJkCGU5orcVcLM -->
+
+
+<!-- https://phuoc.ng/collection/html-dom/check-if-an-element-is-in-the-viewport/ -->
+
+<!-- // ** source chat gpt
+//prompt:
+// How to do this with js without doing it manually? 
+// First the list must be combined with the ‘|’ character:
+// London,UK|Paris,France|Tokyo,Japan|Cape Town, South Africa
+// And then it must be encoded for transmission:
+// London%2CUK%7CParis%2CFrance%7CTokyo%2CJapan%7CCape%20Town%2C%20South%20Africa -->
