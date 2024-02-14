@@ -125,7 +125,7 @@ main > div > section:nth-child(1) > ul {
 }
 main > div > section:nth-child(1) > ul > li {
     width: 40vw;
-    height: 30svh;
+    height: 28svh;
     position: relative;
     border-radius: 10px;
     transition: 200ms;
@@ -355,7 +355,7 @@ main > div > section:nth-child(2) img:nth-child(5) {
     }
 }
 
-@media (min-height: 43em) {
+@media (min-height: 45em) {
     main > div > section:nth-child(1) > ul > li {
         height: 35svh;
     }
