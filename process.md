@@ -143,7 +143,7 @@ Maar dit werkte voor geen meter. Verder kwam ik er niet uit dus besloot ik het o
 
 Deze dag ben ik de heletijd bezig geweest met de main feature van de team website. De bedoeling was dat als je op een naam klikte, de kleuren van die persoon op het land kwamen waar die nog naar toe wilde gaan en al geweest was. Dit was relatief makkelijk. Maar de uitdaging daarna om een gradient op de svg paths te zetten was wat moeilijker. Na wat research kwam ik op dit element:
 
-```
+```md
   <defs>
     <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
       <stop offset="0%" stop-color="yellow" />
@@ -152,7 +152,7 @@ Deze dag ben ik de heletijd bezig geweest met de main feature van de team websit
   </defs>
 ```
 
-link: https://www.w3schools.com/graphics/svg_grad_linear.asp
+[www.w3schools.com/graphics/svg_grad_linear](https://www.w3schools.com/graphics/svg_grad_linear.asp)
 
 De id van de linearGradient kon je toevoegen aan het `fill:` attribuut van de path door `fill="url(#grad1)"` te zeggen. 
 
@@ -168,11 +168,13 @@ Daarna geef ik die array aan de functie die de gradient voor dat land aanmaakt, 
 
 De laaste dag heb ik de functie van gisteren nog wat korter geschreven en gedocumenteerd. Heb ik dit verslag uitgeschreven, en nog wat laaste documentatie geregeld.
 
-Ook opende ik mijn site op mobiel, en die was niet heel mooi. Dit moest ik ook gaan fixen met media queries. 
+Ook opende ik mijn site op mobiel, en die was niet heel mooi. Dit moest ik ook gaan fixen met super kleine media queries. 
+
+Ook heb ik de code door de validator gehaald en nog de laatste dingen gefixed
 
 ### Toegankelijkheids testje 
 
-Ik kwam er vandaag wel achter dat ik niet kon tabben op mijn kaartjes, en dit moest ik wel snel fixen. Ik was een beetje bezig om een button of linkje in the cards te zetten en dan met js te zorgen dat het dan omdraaid als je erop klikt. Maar dit lukte mij niet. Toen zij Joppe uiot mijn groepje opeens dat tab-index bestond, had ik al wel een keer van gehoord maar was ik allang weer vergeten. Dit voegde ik toe op de div's en met deze code hieronder zorgde ik ervoor dat je erop kon klikken met enter. 
+Ik kwam er vandaag wel achter dat ik niet kon tabben op mijn kaartjes, en dit moest ik wel snel fixen. Ik was een beetje bezig om een button of linkje in the cards te zetten en dan met js te zorgen dat het dan omdraaid als je erop klikt. Maar dit lukte mij niet. Toen zei Joppe uit mijn groepje opeens dat tab-index bestond, had ik al wel een keer van gehoord maar was ik allang weer vergeten. Dit voegde ik toe op de div's en met deze code hieronder zorgde ik ervoor dat je erop kon klikken met enter. 
 
 ```js
 document.body.addEventListener("keydown", (event) => {
