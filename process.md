@@ -129,7 +129,32 @@ imgElement.srcset = `low-res.jpg?${cacheBuster} 200w, medium-res.jpg?${cacheBust
 
 ## Dag 7
 
+Deze dag ben ik de heletijd bezig geweest met de main feature van de team website. De bedoeling was dat als je op een naam klikte, de kleuren van die persoon op het land kwamen waar die nog naar toe wilde gaan en al geweest was. Dit was relatief makkelijk. Maar de uitdaging daarna om een gradient op de svg paths te zetten was wat moeilijker. Na wat research kwam ik op dit element:
+
+```
+  <defs>
+    <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="yellow" />
+      <stop offset="100%" stop-color="red" />
+    </linearGradient>
+  </defs>
+```
+
+link: https://www.w3schools.com/graphics/svg_grad_linear.asp
+
+De id van de linearGradient kon je toevoegen aan het `fill:` attribuut van de path door `fill="url(#grad1)"` te zeggen. 
+
+Daarna knaw nog een uitdaging, logica zo schrijven dat als het land al een gradient heeft, je de gradient aanpast aan de hand van de nieuwe kleuren die bij het land horen.
+
+Dit ging niet zo goed, en koste mij veel tijd om erachter te komen wat het probleem nou was. Het werkte in theorie prima, en soms kreeg ik een extra kleur bij de gradient. Maar als ik een andere volgorde van de namen aan klikte waar Eefje de eerste was die werd aangeklikt, ging het fout. Haar kleur werd 2 keer in de gradient gegooid. Ik had aan Marten hulp gevraagd en die zei dat ik het op een andere, meer overzichtelijke manier moest doen. 
+
+Die avond heb ik nog gekeken of ik het nog kon fixen maar toen kwam ik erachter dat het probleem al best wel hoog in de functie zat, en dus besloot ik het om het om te gooien. Namelijk om eerst door de namen te loopen, dan de matchende data van die naam te pakken. Dat land toe te voegen aan een array met die naam. And als het land al bestaat, de naam toe te voegen aan het land naast de naam/namen die er al staan. 
+
+Daarna geef ik die array aan de functie die de gradient voor dat land aanmaakt, en de kleuren van dat land in een array stopt en doorgeeft aan een functie die de gradient maakt en het `linearGradient` element toevoegd aan `<defs></defs>`. Aan het begin is de `<defs></defs>` al geleegd. 
+
 ## Dag 8
+
+De laaste dag heb ik de functie van gisteren nog wat korter geschreven en gedocumenteerd. Heb ik dit verslag uitgeschreven, en nog wat laaste documentatie geregeld.
 
 <!-- Feedback:
 font veranderen
