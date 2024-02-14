@@ -4,9 +4,9 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/112875494?v=4",
     "age": 19,
     "city": "Haarlem",
-    "hobbies": ["", "", ""],
-    "truthsAndLies": ["truth", "truth", "lie"],
-    "favouriteAnimal": "",
+    "hobbies": ["Calisthenics", "Football", "Traveling"],
+    "truthsAndLies": ["I have a fake tooth", "I have been to Thailand twice", "I have been to Costa Rica twice"],
+    "favouriteAnimal": "Dog",
     "dateOfBirth": {
         "year": 2004,
         "month": 5,
