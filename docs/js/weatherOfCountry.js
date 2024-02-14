@@ -19,8 +19,8 @@ const getCountryWeather = async (countries) => {
         const encodedCityList = cityList
             .split('|')
             .map(city => {
-                const [name, country] = city.split(',');
-                const encodedName = encodeURIComponent(name.trim());
+                const [name, country] = city.split(','); // split the city name and the country where there is a comma
+                const encodedName = encodeURIComponent(name.trim()); // San José becomes for instance: San%20Jos%C3%A9
                 const encodedCountry = encodeURIComponent(country.trim());
                 return `${encodedName},${encodedCountry}`;
             })
