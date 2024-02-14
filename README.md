@@ -100,10 +100,14 @@ What I want to add in the future are:
 
 My website is open-source and released under the [MIT License](LICENSE).
 
-## Sources
+<!-- ## Sources -->
+
+<!-- - Costa Rica image: 
+   Costa Rica Country Information ⋅ Natucate. (n.d.). www.natucate.com. https://www.google.com/search?sca_esv=7ec80514b65b74c1&sxsrf=ACQVn09rjC2rYX7-lijLe0tIXHMCW7oUcA:1707215307796&q=costa+rica+photo&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjdjufPwJaEAxVOiv0HHe0dD0EQ0pQJegQIDRAB&biw=876&bih=1008&dpr=2#imgrc=N5eQGSEdiygMuM -->
 
 <!-- costa rica url -->
 <!-- https://www.google.com/search?sca_esv=7ec80514b65b74c1&sxsrf=ACQVn09rjC2rYX7-lijLe0tIXHMCW7oUcA:1707215307796&q=costa+rica+photo&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjdjufPwJaEAxVOiv0HHe0dD0EQ0pQJegQIDRAB&biw=876&bih=1008&dpr=2#imgrc=N5eQGSEdiygMuM -->
+
 
 <!-- bangkok url -->
 <!-- https://www.google.com/search?q=bankok+photo&tbm=isch&ved=2ahUKEwjNtZirw5aEAxUZuP0HHbVwCK8Q2-cCegQIABAA&oq=bankok+photo&gs_lp=EgNpbWciDGJhbmtvayBwaG90bzIHEAAYgAQYE0jHEFAAWIsOcAF4AJABAJgBhQKgAaIGqgEFNS4wLjK4AQPIAQD4AQGKAgtnd3Mtd2l6LWltZ8ICCBAAGAcYHhgTwgIGEAAYBxgewgIGEAAYCBgeiAYB&sclient=img&ei=pAzCZc3TEpnw9u8PteGh-Ao&bih=1008&biw=876#imgrc=cfEz7jE5cRkDPM&imgdii=XQwwvypFIlFkpM -->
