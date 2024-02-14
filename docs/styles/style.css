@@ -1,4 +1,3 @@
-
 :root {
     --color-header: rgb(169, 169, 169);
     --color-white: white;
@@ -32,7 +31,6 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
-
 
 /* header */
 header {

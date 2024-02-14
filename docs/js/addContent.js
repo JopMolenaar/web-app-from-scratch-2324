@@ -70,7 +70,6 @@ const addTempToCountries = (weatherData, country, backDiv) => {
         };
         const tempCelsius = fahrenheitToCelsius(tempFahrenheit);
         if (address.includes(country)) {
-            console.log(country);
             const countryTemp = document.createElement("p");
             countryTemp.textContent = `${tempCelsius} °C`;
             backDiv.append(countryTemp);
@@ -93,6 +92,7 @@ const createCards = async (data) => {
     countryCards.forEach((country) => {
         const innerDiv = document.createElement("div");
         innerDiv.classList.add("flip-card-inner");
+        innerDiv.setAttribute("tabindex", "0");
         const backDiv = document.createElement("div");
         backDiv.classList.add("flip-card-back");
         const frontDiv = document.createElement("div");
@@ -192,13 +192,23 @@ const addContentToBucketListCountry = (data) => {
     reason.textContent = bucketListCountry[0].reason;
 };
 
+document.body.addEventListener("click", (event) => {
+    flipTheCards(event.target);
+});
+
+document.body.addEventListener("keydown", (event) => {
+    if (event.keyCode === 13) {
+        flipTheCards(event.target);
+    }
+});
+
 /**
  * This function listens for a click on an element and looks if the element is the one we are looking for.
  * After that we toggle or remove the inner-card-flipped class that rotates the element 180deg
  * @param {Element} event - An element that got clicked
  */
-document.body.addEventListener("click", (event) => {
-    const parent = event.target.parentElement; // Get the parent of the element that is clicked
+const flipTheCards = (event) => {
+    const parent = event.parentElement; // Get the parent of the element that is clicked
     const secondParent = parent.parentElement; // Get the parent of the parent of the element that is clicked
     const cards = document.querySelectorAll(".flip-card-inner"); // Get all cards (not the li but the item that needs to be flipped)
     if (secondParent.classList.contains("flip-card-inner")) {
@@ -213,10 +223,12 @@ document.body.addEventListener("click", (event) => {
         });
     } else if (parent.classList.contains("flip-card-inner")) {
         parent.classList.toggle("inner-card-flipped");
+    } else if (event.classList.contains("flip-card-inner")){
+        event.classList.toggle("inner-card-flipped");
     } else {
         // If somewhere on the body is clicked, all cards flip to the front side of the card
         cards.forEach((card) => {
             card.classList.remove("inner-card-flipped");
         });
     }
-});
+}
