@@ -2,13 +2,14 @@
 
 <!-- ☝️ replace this description with a description of your own work -->
 
+
 ## Description
+
 
 Here comes a description!
 
 <!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
-![Here comes a picture of the frontend of my website. Its not there yet]( "Shiny frontend picture of my website")
+![Here is a picture of the frontend of my website.](docs/images/shinyFrontEndPictureS1.png  "Shiny frontend picture of my website")
 
 <!-- Maybe a table of contents here? 📚 -->
 
