@@ -135,3 +135,6 @@ My website is open-source and released under the [MIT License](LICENSE).
 // London,UK|Paris,France|Tokyo,Japan|Cape Town, South Africa
 // And then it must be encoded for transmission:
 // London%2CUK%7CParis%2CFrance%7CTokyo%2CJapan%7CCape%20Town%2C%20South%20Africa -->
+
+<!-- loading gif -->
+<!-- /* https://www.google.com/search?q=gif+loading&oq=gif+loading&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIzNzNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#vhid=ug9A_WVkB4KZFM&vssid=l */ -->

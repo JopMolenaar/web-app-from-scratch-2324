@@ -1,9 +1,5 @@
-:root {
-    --color-state: rgb(227, 0, 0);
-}
-
 main > div > section:nth-child(1) #stateText {
-    background-color: rgb(208, 208, 208);
+    background-color: var(--color-header);
     border: solid var(--color-state) 2px;
     height: 30vw;
     width: 50vw;

@@ -14,9 +14,6 @@
     border-radius: 10px;
 }
 
-/* .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-} */
 .inner-card-flipped {
     transform: rotateY(180deg);
 }
@@ -31,8 +28,8 @@
 }
 
 .flip-card-front {
-    background-color: #bbb;
-    color: black;
+    background-color: var(--front-card-color);
+    color: var(--color-black);
     border-radius: 10px;
     z-index: -2;
 }
@@ -48,8 +45,8 @@
 }
 
 .flip-card-back {
-    background-color: rgb(87, 87, 87);
-    color: white;
+    background-color: var(--back-card-color);
+    color: var(--color-black);
     transform: rotateY(180deg);
     border-radius: 10px;
 }
