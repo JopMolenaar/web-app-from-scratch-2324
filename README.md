@@ -90,10 +90,10 @@ For more info: [www.visualcrossing.com/...](https://www.visualcrossing.com/resou
 
 What I want to add in the future are:
 
-- [] accessible for everyone
-- [] Darkmode
-- [] Goodlooking progressive enhancement states
-- [] Goodlooking error and loading states
+- [ ] accessible for everyone
+- [ ] Darkmode
+- [ ] Goodlooking progressive enhancement states
+- [ ] Goodlooking error and loading states
 
 ## License
 
