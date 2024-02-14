@@ -59,6 +59,20 @@ git clone https://github.com/JopMolenaar/web-app-from-scratch-2324.git
 
 ## External data source properties
 
+The external data source that I use is the api from visualcrossing.com.
+I use this api to get the current temperature of the countries that I have visited. 
+You need an api key for this api, and you will get one when you make an account. 
+
+The api query that I use is:
+```
+https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timelinemulti?key=${apiKey}&locations=${encodedCityList}
+```
+
+The encodedCityList looks like: `London%2CUK%7CParis%2CFrance%7CTokyo%2CJapan%7CCape%20Town%2C%20South%20Africa`, but is made this way in the js.
+
+The response consists out of four countries, with the current weathercondition and the upcoming 7 days weatherconditions.
+For more info: [www.visualcrossing.com/...](https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/)
+
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
 ## Whishlist
