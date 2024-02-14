@@ -64,7 +64,7 @@ main {
 /* div to make the section snap  */
 main > div {
     width: 100vw;
-    height: 100vh;
+    height: 100svh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     scroll-snap-stop: always;
@@ -73,7 +73,7 @@ main > div {
 main > div > section {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 100svh;
     scroll-snap-align: start;
 }
 
@@ -112,7 +112,7 @@ main > div > section:nth-child(1) > ul {
     height: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5vh;
+    margin-top: 5svh;
     margin-bottom: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -122,7 +122,7 @@ main > div > section:nth-child(1) > ul {
 }
 main > div > section:nth-child(1) > ul > li {
     width: 40vw;
-    height: 35vh;
+    height: 35svh;
     position: relative;
     border-radius: 10px;
     transition: 200ms;
@@ -274,7 +274,7 @@ main > div > section:nth-child(2) img:nth-child(3) {
     );
 }
 main > div > section:nth-child(2) img:nth-child(3).inViewPort {
-    object-position: 50% 5vh;
+    object-position: 50% 5svh;
 }
 main > div > section:nth-child(2) img:nth-child(4) {
     width: 100%;
@@ -395,7 +395,7 @@ main > div > section:nth-child(2) img:nth-child(5) {
     main > div > section:nth-child(1) > section {
         display: flex;
         flex-direction: column;
-        height: 30vh;
+        height: 30svh;
         font-size: 1.1em;
         max-width: 23em;
     }
@@ -412,7 +412,7 @@ main > div > section:nth-child(2) img:nth-child(5) {
         gap: 1.5vw;
     }
     main > div > section:nth-child(1) > ul > li {
-        height: 40vh;
+        height: 40svh;
     }
     main > div > section:nth-child(2) img:nth-child(4) {
         grid-row: 3 / 5;

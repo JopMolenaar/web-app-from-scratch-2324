@@ -138,3 +138,5 @@ My website is open-source and released under the [MIT License](LICENSE).
 
 <!-- loading gif -->
 <!-- /* https://www.google.com/search?q=gif+loading&oq=gif+loading&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIzNzNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#vhid=ug9A_WVkB4KZFM&vssid=l */ -->
+
+<!-- https://dev.to/frehner/css-vh-dvh-lvh-svh-and-vw-units-27k4 -->
