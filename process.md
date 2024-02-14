@@ -156,6 +156,21 @@ Daarna geef ik die array aan de functie die de gradient voor dat land aanmaakt, 
 
 De laaste dag heb ik de functie van gisteren nog wat korter geschreven en gedocumenteerd. Heb ik dit verslag uitgeschreven, en nog wat laaste documentatie geregeld.
 
+Ik kwam er wel achter dat ik niet kon tabben op mijn kaartjes, dit moest ik wel hee snel fixen. Ik was een beetje bzig om een button of linkje in the cards te zetten en dan met js te zorgen dat het dan omdraaid als je erop klikt. Maar dit lukte mij niet. Toen zij Joppe uiot mijn groepje opeens dat tab-index bestond, had ik al wel een keer van gehoord maar was ik allang weer vergeten. Dit voegde ik toe op de div's en met:
+
+```js
+document.body.addEventListener("keydown", (event) => {
+    if (event.keyCode === 13) {
+        flipTheCards(event.target);
+    }
+});
+```
+
+Zorgde ik ervoor dat je erop kon klikken met enter. 
+
+
+Ook opende ik mijn site op mobiel, en die was niet heel mooi. Dit moest ik ook gaan fixen met media queries. 
+
 <!-- Feedback:
 font veranderen
 Make it work
